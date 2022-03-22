@@ -1,6 +1,6 @@
 ---
 order: 1
-description: Test our features
+description: Platform feature test
 ---
 
 # Feature test
