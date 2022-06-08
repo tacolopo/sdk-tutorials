@@ -1,6 +1,6 @@
 ---
 title: "The Origins"
-order: 7
+order: 
 description: Historic overview
 tag: fast-track
 ---
