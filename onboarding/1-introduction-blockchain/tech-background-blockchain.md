@@ -19,13 +19,13 @@ You are going to dive deeper into the tech background making blockchain protocol
 
 </HighlightBox>
 
-In this section, you explore the technical background making blockchains possible. Starting with networks and protocols to then dive deepeer into blockchains as a ledger, as well as how consensus is established in blockchains, and cryptographic fundamentals of blockchain technology.
+In this section, you explore the technical background making blockchains possible. Starting with networks and protocols to then dive deeper into blockchains as a ledger, as well as how consensus is established in blockchains, and cryptographic fundamentals of blockchain technology.
 
 If you are thinking "this all sounds very familiar", do not worry: you can always go ahead to the [next section](./blockchain-in-detail.md) for a closer look at blockchain technology itself - the origins of blockchain technology, deployment patterns in blockchain, and smart contracts.
 
 ## Networks and protocols
 
-It is time to learn about networks. You will not go into too much depth, but a few concepts are relevant to understand blockchain technology.
+It is time to learn about networks. You will not go into too much depth, but a few concepts are relevant to understanding blockchain technology.
 
 A **network** is _a group or system of interconnected computer systems and other computing hardware devices_. These are connected through communication channels between the different nodes or data links allowing them to exchange data and share resources, operating programs, and information.
 
@@ -101,7 +101,7 @@ JSON is an open-standard, language-independent **data format**. Meaning it is a 
 
 JSON is based on JavaScript. It was developed as a response to the need for a protocol that could ensure server-to-browser communication without relying on browser plugins (like Java or Adobe Flash Player), i.e. software components which add new features to web browsers and are also referred to as "add-ons" or "extensions".
 
-Other to JSON comparable formats are XML, CSV, and YAML.
+Other formats comparable to JSON are XML, CSV, and YAML.
 
 </ExpansionPanel>
 
@@ -112,13 +112,13 @@ What are **potential failures** of an API request?
 * The server could send a malformed document.
 * Either party could send a malicious request, for example, SQL injection `GET https://example.com/inventory?id=2311%3BDROP%20TABLE%3B`.
 
-In modern network systems and in fact, the web itself, a great deal of effort goes into mitigating these **translation and synchronization issues between clients and servers**. Traditionally, network synchronization issues were often mitigated by implementing some kind of hierarchy. Blockchain uses a **non-hierarchical approach** to mitigate synchronization issues by making sure that every participant always has access to enough data to verify the integrity of ALL the data in the network.
+In modern network systems and the web itself, a great deal of effort goes into mitigating these **translation and synchronization issues between clients and servers**. Traditionally, network synchronization issues were often mitigated by implementing some kind of hierarchy. Blockchain uses a **non-hierarchical approach** to mitigate synchronization issues by making sure that every participant always has access to enough data to verify the integrity of ALL the data in the network.
 
 ### Networking and protocols
 
 Before diving into how these issues are approached with blockchain technology, revisit how protocols in networking solve problems inherent to a hierarchy-free, fault-prone environment.
 
-The term **networking** covers both _the hardware side and the software protocols used to transmit data and let computers communicate_. The interaction between software and hardware becomes especially interesting in a blockchain context because of a networks' physical aspect.
+The term **networking** covers both _the hardware side and the software protocols used to transmit data and let computers communicate_. The interaction between software and hardware becomes especially interesting in a blockchain context because of a network's physical aspect.
 
 Imagine a cable connection between two computers. Traditionally a coaxial cable was used to carry a signal. Cables can be subject to interference from many things, so there is no guarantee that the signal originating at point A will be received by point B. To mitigate this problem and ensure smooth communication, a whole stack of hardware and software protocols has been developed. Remember, **protocols** are like behavior guidelines for machines that help them cooperate and understand each other, as well as mitigate any translation and synchronization issues.
 
@@ -164,11 +164,11 @@ Watch [Greg Slepak explain the concept of decentralization](https://www.youtube.
 
 </HighlightBox>
 
-For the purpose of our discussion, focus on the main difference between the different types: the number of **points of failure**.
+For the purpose of this discussion, focus on the main difference between the different types: the number of **points of failure**.
 
 A **point of failure** can be understood as _a single node or part of a network whose failure leads to the shutdown or dysfunction of the entire network and/or the system no longer being able to perform its intended operations_. Centralized networks only have **one** point of failure. Erasing a point of failure leads to less centralization and towards a distributed network.
 
-Although the advantages and disadvantages of each type continue to be debated, to conclude: network design has implications on functionality and more general issues, for example, privacy and transparency. It is important to keep in mind, a network does not have to be centralized, decentralized, or distributed - it can be a mix of different components of each type. The network design should always match the envisioned functionality of the network.
+Although the advantages and disadvantages of each type continue to be debated, to conclude: network design has implications on functionality and more general issues, for example, privacy and transparency. It is important to keep in mind, that a network does not have to be centralized, decentralized, or distributed - it can be a mix of different components of each type. The network design should always match the envisioned functionality of the network.
 
 <ExpansionPanel title="Peer-to-peer (P2P) networking - a distributed network">
 
@@ -221,7 +221,7 @@ If you imagine blockchain as a computer, it would have three layers: **database*
 
 <!-- Include video: Title: How does Blockchain Actually Work?, URL:https://www.youtube.com/watch?v=Za5lPKNV_Mk&feature=youtu.be -->
 
-All **data**, such as currency transfers or smart contract code or calls of function, is encoded in **transactions**, which are bundled into blocks and must be validated. Remember, data cannot be deleted or altered after being stored on a blockchain.
+All **data**, such as currency transfers, smart contract code, or calls of function, is encoded in **transactions**, which are bundled into blocks and must be validated. Remember, data cannot be deleted or altered after being stored on a blockchain.
 
 ![Blockchain computer](/onboarding/1-introduction-blockchain/images/blockchain-computer.png)
 
@@ -258,11 +258,11 @@ The Open Systems Interconnection (OSI) model, developed by the International Org
 * **Layer 2 - the data link layer:** responsible for the message delivery between nodes.
 * **Layer 3 - the network layer:** responsible for data transmission between devices in different networks by dealing with packet routing to determine data routing paths and addressing to identify sender and receiver.
 * **Layer 4 - the transport layer:** responsible for end-to-end delivery of messages, acknowledgments if successful data transmissions, and re-transmissions of data in case of errors by relying on services from the network layer and providing services to the application layer.
-* **Layer 5 - the session layer:** responsible to establish a connection, maintain a session, and terminating it, as well as for ensuring synchronization with checkpoints.
+* **Layer 5 - the session layer:** responsible to establish a connection, maintaining a session, and terminating it, as well as for ensuring synchronization with checkpoints.
 * **Layer 6 - the presentation layer:** responsible for translation, encryption, decryption, and compression of data.
 * **Layer 7 - the application layer:** implemented by the network's application and responsible for interacting directly with the application.
 
-Whereas, layers 1 to 3 are hardware layers, the transport layer (layer 5) is the heart of the OSI, and layers 5 to 7 are software layers.
+Whereas layers 1 to 3 are hardware layers, the transport layer (layer 5) is the heart of the OSI, and layers 5 to 7 are software layers.
 
 Want to take a look at the OSI model in more detail? Take a look at this [overview from GeeksforGeeks](https://www.geeksforgeeks.org/layers-of-osi-model/).
 
@@ -300,7 +300,7 @@ Transactions contain an **arbitrary set of data** depending on the purpose and s
 
 Processing each transaction in the ledger enables us to derive all kinds of meta-information such as the number of transactions, activity per account, and individual account balances. An account balance like the balance of your bank account is an abstract representation of a list of transactions.
 
-If the word transaction reminds you of database management systems, this too is appropriate. Transactions happen in databases too. For instance, technology permitting, a single transaction might look like:
+If the word transaction reminds you of database management systems, this too is appropriate. Transactions happen in databases too. For instance, technology permitting, a single transaction might look like this:
 
 * Charge customer $10.
 * Ship one widget.
@@ -343,7 +343,7 @@ In a highly centralized traditional ledger, data reliability, information contro
 
 Further, power asymmetries favoring the central authority can lead to deviant behavior and/or unintended consequences. For example, an authority in charge of updating the ledger could alter it maliciously. Centralized, "traditional ledgers" are also more prone to be affected by malicious attacks due to their centralized point of failure and data storage compared to distributed ledgers.
 
-On the other hand, distributed ledgers have a higher degree of transparency, security, lower transaction time, and lower transaction costs for participants.
+On the other hand, distributed ledgers have a higher degree of transparency and security, as well as lower transaction time and transaction costs for participants.
 
 <HighlightBox type="info">
 
@@ -385,7 +385,7 @@ Until some decades ago, cryptography constituted a method of encryption mainly b
 
 In ancient times **simple mechanisms for encryption** were used. One example of such a simple instrument is the so-called **Caesar's cipher**, also known as **shift cipher**. Named after Julius Caesar who used it for private correspondence, the shift cipher is a type of substitution cipher already used long before Caesar.
 
-Caesar's cipher constitutes a substitution mechanism, in which each letter in a text/message is replaced by a certain letter according to a fixed number of positions in the alphabet later (shift value). It can easily be deciphered/broken because it is a single-alphabet substitution cipher. Breaking a Caesar's cipher is among others possible by using two rotating disks.
+Caesar's cipher constitutes a substitution mechanism, in which each letter in a text/message is replaced by a certain letter according to a fixed number of positions in the alphabet later (shift value). It can easily be deciphered/broken because it is a single-alphabet substitution cipher. Breaking Caesar's cipher is among others possible by using two rotating disks.
 
 ![Rotating disk](/onboarding/1-introduction-blockchain/images/caesars-cipher.png)
 
@@ -393,14 +393,14 @@ In more modern applications, the encryption step of Caesar's ciphers is often pa
 
 A further example of the application of shift ciphers is the **Vigenère cipher**, which uses Caesar's cipher where the value of the shift is defined with a repeating keyword. This specific cipher is unbreakable if the following conditions are fulfilled:
 
-* The length of the keyword is the same as of the message.
+* The length of the keyword is the same as the message.
 * The keyword is chosen randomly.
 * The keyword is not entrusted to anyone else.
 * The keyword cannot be reused.
 
 <HighlightBox type="info">
 
-These conditions are met by so-called [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) ciphers, but very hard to maintain. In one-time pad encryption, a text is paired with a pre-shared, single-use key (the one-time pad). A segment or each character of the text is encrypted through a combination of the text and the key/pad.
+These conditions are met by so-called [one-time pad](https://en.wikipedia.org/wiki/One-time_pad) ciphers but are very hard to maintain. In one-time pad encryption, a text is paired with a pre-shared, single-use key (the one-time pad). A segment or each character of the text is encrypted through a combination of the text and the key/pad.
 
 </HighlightBox>
 
@@ -411,7 +411,7 @@ Simple substitution ciphers like Caesar's cipher are easily broken. This becomes
 
 If the cipher type is known, the encrypted message can be decrypted by using frequency analysis or pattern words. If it is known that the Caesar cipher is used, the malicious party would only have to check for all the number of possible shifts in a brute force attack. For messages in English, this would require going through 26 different options as the number of possible shifts is determined by the number of characters in an alphabet.
 
-Encrypting messages multiple times with a simple substitution cipher does not increase the security of encryption. Why is this? If you encrypt a message by a shift value X and then encrypt it by a shift value Y, it is as you would have encrypted it by the shift value X+Y. Thus, decrypting it is as difficult as it would be with a simple substation cipher.
+Encrypting messages multiple times with a simple substitution cipher does not increase the security of encryption. Why is this? If you encrypt a message by a shift value X and then encrypt it by a shift value Y, it is as if you would have encrypted it by the shift value X+Y. Thus, decrypting it is as difficult as it would be with a simple substation cipher.
 
 **Medieval times - frequency analysis and homophonic substitution**
 
@@ -442,15 +442,15 @@ Gilbert Vernam proposed the idea of a teleprinter cipher in 1917, in which a key
 
 During World War II, **mechanical and electromechanical cipher machines** were often used as a more secure option to manual systems. Some examples of cipher machines are: 
 
-* TypeX and Colossus used by Great Britain.
-* The SIGABA used by the US.
-* The Lacida used by the Polish.
-* The Enigma machine used by Nazi Germany.
-* The VIC cipher, the most complex hand cipher, used by the Soviets - at least until 1957.
+* TypeX and Colossus, used by Great Britain.
+* The SIGABA, used by the US.
+* The Lacida, used by the Polish.
+* The Enigma machine, used by Nazi Germany.
+* The VIC cipher, the most complex hand cipher, used by the Soviets at least until 1957.
 
-**Symmetric key algorithms**
+**Symmetric-key algorithms**
 
-Until modern cryptography was developed in the 1970s, **encryption algorithms had always been symmetric key algorithms**. This type of algorithm can be found in the electromechanical machines of World War II, but also Caesar's cipher and all other past cipher systems.
+Until modern cryptography was developed in the 1970s, **encryption algorithms had always been symmetric key algorithms**. This type of algorithm can be found in the electromechanical machines of World War II, but also in Caesar's cipher and all other past cipher systems.
 
 Symmetric key algorithms use a **key**, usually, a codebook, to encrypt a message. Both sender and recipient of a message have to know the key and keep it secret to ensure the security of encryption. So that the algorithm could be useful, the key had to be exchanged through a "secure channel" before the start of communication and maintained secret. As the number of participants increases, the secret is harder to keep. Thus, this type of algorithm is not suitable for communication between large amounts of participants.
 
@@ -487,21 +487,21 @@ Want to take a look at the Diffie-Hellman paper introducing the key exchange? Se
 
 Sadly, all these developments in cryptography were not made public - but they did not remain secret for long.
 
-Another important development in the beginning 1970s was the **Data Encryption Standard (DES)**. Developed by IBM, the algorithm was approved by the National Bureau of Standards (NBS) after consulting the NSA and amending the version to be stronger against cryptanalysis. In 1977, it became part of the official Federal Information Processing Standard (FIPS).
+Another important development at the beginning 1970s was the **Data Encryption Standard (DES)**. Developed by IBM, the algorithm was approved by the National Bureau of Standards (NBS) after consulting the NSA and amending the version to be stronger against cryptanalysis. In 1977, it became part of the official Federal Information Processing Standard (FIPS).
 
 Neal Koblitz and Victor Miller both introduced **elliptic curve cryptography** in the mid-1980s. Their achievements led to the development of new public-key algorithms based on the discrete logarithm problem - discrete logarithms are quickly computable in a few special cases but there is no efficient method known to compute them in general. Elliptic curve cryptography is mathematically more complex, while at the same time allowing for smaller key sizes and faster operations.
 
-Beginning the era of the internet, a standard for encryption became vital to ensure its commercial use, among others for commercial transactions. Until the introduction of the **Advanced Encryption Standard (AES)**, DES continued to be used for encryption. After a public competition hosted by the National Institute of Standards and Technology (NIST, the successor agency of NBS), AES was selected as encryption standard. In addition, the Secure Socket Layer (SSL) was developed and introduced as a standard, which found application in web browsing, email, etc. The necessity for encryption later became more evident with wireless internet and the expanded use of devices and applications that rely on secure communication.
+Beginning the era of the internet, a standard for encryption became vital to ensure its commercial use, among others for commercial transactions. Until the introduction of the **Advanced Encryption Standard (AES)**, DES continued to be used for encryption. After a public competition hosted by the National Institute of Standards and Technology (NIST, the successor agency of NBS), AES was selected as the encryption standard. In addition, the Secure Socket Layer (SSL) was developed and introduced as a standard, which found application in web browsing, email, etc. The necessity for encryption later became more evident with wireless internet and the expanded use of devices and applications that rely on secure communication.
 
 The developments after World War II and especially in the 1970s led cryptography to become part of the public realm again as encryption became available for public use.
 
 </ExpansionPanel>
 
-In simple words, **public-key cryptography**, also known as asymmetric cryptography, is _a form of cryptography based on **key pairs**_. Every pair consists of a **public** and a **private key**. The public key, as its names suggests, can be shared publicly. Its counterpart, the private key, should not be publicly shared. As long as the private key stays private, the security of the system is not endangered. Compare the key pair to having your house address public but keeping the key to your house private. Assuming you do not want to have any strangers in your home, you will want to keep your private key safe.
+In simple words, **public-key cryptography**, also known as asymmetric cryptography, is _a form of cryptography based on **key pairs**_. Every pair consists of a **public** and a **private key**. The public key, as its name suggests, can be shared publicly. Its counterpart, the private key, should not be publicly shared. As long as the private key stays private, the security of the system is not endangered. Compare the key pair to having your house address public but keeping the key to your house private. Assuming you do not want to have any strangers in your home, you will want to keep your private key safe.
 
 The two keys work together to carry out the **two functions of asymmetric cryptography**:
 
-* **Authentication:** the process of confirming the identity and/or verifying the source. The public key serves as a verification instrument for the private key. For example, a message can be signed with the sender's private key so that it confirms the message is in fact signed by the owner with their private key.
+* **Authentication:** the process of confirming the identity and/or verifying the source. The public key serves as a verification instrument for the private key. For example, a message can be signed with the sender's private key so that it confirms the message is signed by the owner with their private key.
 * **Encryption:** the process of encoding the message as it is meant for a specifically authorized party. The information is encrypted with a public key and only the private key can decrypt the information encrypted with the public key.
 
 <HighlightBox type="tip">
@@ -522,7 +522,7 @@ Public-key cryptography ensures confidentiality, authenticity, and non-repudiati
 
 <HighlightBox type="info">
 
-Fun fact: Cryptographic systems are not exclusive of one another. In hybrid systems, symmetrical and asymmetrical cryptography is combined. For example, asymmetric encryption could be employed to transfer symmetric encryption, which would then be used as an encryption key for the message. Examples of these hybrid cryptosystems are [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) and [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+Fun fact: cryptographic systems are not exclusive to one another. In hybrid systems, symmetrical and asymmetrical cryptography is combined. For example, asymmetric encryption could be employed to transfer symmetric encryption, which would then be used as an encryption key for the message. Examples of these hybrid cryptosystems are [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) and [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 
 </HighlightBox>
 
@@ -532,7 +532,7 @@ The length of the key matters. One would think the longer the key the more secur
 
 Maybe a simple example makes it clearer: every binary entity of information can have the value `0` or `1`. If one has an 8-bit key, 2^8 or 256 possible keys could be used. As the number of bits per unit of information increases, so does the number of possible keys.
 
-Modern asymmetric ciphers have been established as a secure option but are not free of faults and possible problems. Faulty design and/or implementation have been points of insecurity. Furthermore, public-key cryptography is susceptible to brute force attacks, as well as "man-in-the-middle" attacks. The latter occur, when a third party intercepts, decrypts, and re-encrypts a message. A trusted entity installed as a certification authority can prevent such attacks.
+Modern asymmetric ciphers have been established as a secure option but are not free of faults and possible problems. Faulty design and/or implementation have been points of insecurity. Furthermore, public-key cryptography is susceptible to brute force attacks, as well as "man-in-the-middle" attacks. The latter occurs, when a third party intercepts, decrypts, and re-encrypts a message. A trusted entity installed as a certification authority can prevent such attacks.
 
 Have a look at some examples to better understand how public-private key pairs are used and how they implement functionalities to make authentication and encryption possible.
 
@@ -587,11 +587,11 @@ Public key infrastructure (PKI) is used to prevent fraudulent keys and the tampe
 
 ### Cryptographic hash functions
 
-After exploring how cryptography is used to make transactions secure with the use of key pairs, now it is time to look at how the **integrity of the blocks** and the logging of transactions in blocks is achieved.
+After exploring how cryptography is used to make transactions secure with the use of key pairs, now it is time to look at how the **integrity of the blocks** and the logging of transactions in blocks are achieved.
 
 A **hash function** is _a function used to map a group of characters (i.e. data) into values of a certain length called hash values or just hash_ - hash comes from the French "hacher" meaning to chop. Cryptographic hash functions are a special form of one-way hash functions that exhibit certain features to allow their implementation in cryptographic systems.
 
-A hash function performs an operation on an input of data (i.e. the string) that results in an output of data of a fixed size called a hash value, a hash code, a digest, or sometimes just a hash. The fixed-length output remains the same no matter the size of the message. Remember, five main properties are of essence for a hash function:
+A hash function performs an operation on an input of data (i.e. the string) that results in an output of data of fixed size called a hash value, a hash code, a digest, or sometimes just a hash. The fixed-length output remains the same no matter the size of the message. Remember, five main properties are of essence for a hash function:
 
 * It is **deterministic**: the hash function produces the same output (hash value) for the same input (message).
 * It is **fast**: the hash value for any given message is computed quickly.
@@ -601,7 +601,7 @@ A hash function performs an operation on an input of data (i.e. the string) that
 
 <HighlightBox type="warn">
 
-Be careful with confusing hashing and encrypting, they are two different concepts. Hashing is an operation, which transforms data into a checksum or message digest. It is a one-way operation; it cannot be reversed. While encryption describes a two-way operation. This transforms a message into cipher-text and can also transform it back into its original state while ensuring the confidentiality of the message. Both terms should not be used analogously.
+Be careful with confusing hashing and encrypting, they are two different concepts. Hashing is an operation, which transforms data into a checksum or message digest. It is a one-way operation; it cannot be reversed. While encryption describes a two-way operation. This transforms a message into ciphertext and can also transform it back into its original state while ensuring the confidentiality of the message. Both terms should not be used analogously.
 
 </HighlightBox>
 
@@ -629,7 +629,7 @@ You can see hashing in action to get the feel for it on the [OnlineMD5 website](
 
 </HighlightBox>
 
-Cryptographic hash functions are used for digital signature and file integrity verification and find application in areas such as credit card transactions and software updates. Their reliability is of the utmost importance as they are so central to our digital security and verification. Reassessing them is of importance to early detect if a cryptographic hash function can be re-generated.
+Cryptographic hash functions are used for digital signature and file integrity verification and find application in areas such as credit card transactions and software updates. Their reliability is of the utmost importance as they are so central to digital security and verification. Reassessing them is of importance to early detect if a cryptographic hash function can be re-generated.
 
 Testing a hash function's robustness when creating unique hashes is done with **collision attacks**. In a collision attack, one tries to find two sets of inputs that produce the same hash function. In 2017, Google conducted a collision attack on [SHA-1](https://shattered.io/). It was considered a relatively insecure hash function but was still widely used and no one had actually proved it made duplicate hashes. Google managed to create a successful collision attack which cost roughly $110,000.
 
@@ -641,7 +641,7 @@ Bitcoin uses `SHA-256` and Ethereum uses `Keccak-256`and `Keccak-512` as hash fu
 
 <ExpansionPanel title="Digital signatures and certificate authority">
 
-The concept of **digital signatures** is simple: if a given message is first hashed and then encrypted by a private key, you can verify the signature by decrypting with the corresponding public key. Hashing the message avoids the creation of signatures by mixing the messages and corresponding signatures. This way, you know that the sender has the private key to the given public key. However, this is not truly an identification.
+The concept of **digital signatures** is simple: if a given message is first hashed and then encrypted by a private key, you can verify the signature by decrypting it with the corresponding public key. Hashing the message avoids the creation of signatures by mixing the messages and corresponding signatures. This way, you know that the sender has the private key to the given public key. However, this is not truly an identification.
 
 It is time for a **certificate authority (CA)**. The CA signs a certificate to prove the identity of the owner of a public key. Such certificates usually include the subject name, which must be verified by the CA. The identity is proven if you can verify the CA's signature and trust the CA.
 
@@ -677,7 +677,7 @@ It is time to move on to how consensus is established in decentralized networks 
 
 ## Consensus and decentralized networks
 
-A blockchain is a well-ordered set of data on which all peers *eventually* agree. What they agree on is considered as the single truth. Reached by consensus, the **single truth** is the **_single true state of the distributed ledger_**. **Consensus has to be reached to guarantee data consistency.**
+A blockchain is a well-ordered set of data on which all peers *eventually* agree. What they agree on is considered the single truth. Reached by consensus, the **single truth** is the **_single true state of the distributed ledger_**. **Consensus has to be reached to guarantee data consistency.**
 
 ![Blockchain as a consensus network](/onboarding/1-introduction-blockchain/images/blockchain-as-a-consensus-network.png)
 
@@ -721,7 +721,7 @@ Consensus algorithms establish **safety** and **liveness** by generating consens
 
 <ExpansionPanel title="General types of consensus algorithms">
 
-Consensus algorithms can be differentiated into **lottery-based** such as PoW and **voting-based algorithms**, like for example in the case of Delegated-Proof-of-Stake.
+Consensus algorithms can be differentiated into **lottery-based** such as PoW and **voting-based algorithms**, for example in the case of Delegated-Proof-of-Stake.
 
 In lottery-based algorithms, nodes creating blocks are randomly selected in a mechanism strongly resembling a lottery. These algorithms are said to have **high scalability** but at the same time a tendency of producing **forks** and with it a **high-latency finality**. With increased block creation time the probability of another peer creating a new block before receiving the just created one can result in numerous forks. This leads to an instance that has to be solved to achieve finality.
 
@@ -778,7 +778,7 @@ For a more detailed look at pBFT, take a look at the article from Brian Curran [
 
 #### Proof-of-Work (PoW)
 
-Remember our generals? Byzantine Fault Tolerance can be achieved if the loyal (non-faulty) generals reach a majority agreement on their attack strategy (consensus). **Proof-of-Work (PoW)** is one way to achieve BFT.
+Remember the generals? Byzantine Fault Tolerance can be achieved if the loyal (non-faulty) generals reach a majority agreement on their attack strategy (consensus). **Proof-of-Work (PoW)** is one way to achieve BFT.
 
 PoW is a cryptographic puzzle first introduced with [Hashcash](http://www.hashcash.org/). This consensus algorithm was reused in Bitcoin and has been widely adopted since then.
 
@@ -792,7 +792,7 @@ When the miner combines this number with ordered transactions in a block, it res
 * A `1/4` chance of getting a hash that starts with `00`;
 * A `1/1024` chance of getting a hash that starts with `0000000000`.
 
-The only way to find a nonce that returns the desired value is to repeatedly try random values. The miner node that finds an answer has most probably tried a large number of times. Finding the number is considered as evidence of considerable effort, or proof that a lot of work must have been invested in the search. This is why the process is called *Proof-of-Work*.
+The only way to find a nonce that returns the desired value is to repeatedly try random values. The miner node that finds an answer has most probably tried a large number of times. Finding the number is considered evidence of considerable effort, or proof that a lot of work must have been invested in the search. This is why the process is called *Proof-of-Work*.
 
 <HighlightBox type="info">
 
@@ -820,7 +820,7 @@ Here **difficulty** comes into play. Difficulty is the term used for the mechani
 
 **Proof-of-Stake (PoS)** is another method of selecting the authoritative node for a given block. PoS is based on the assumption that those with the most to lose are the most incentivized to safeguard network integrity. PoS solves the energy problem in PoW as "work", the use of energy through computational power, is not the proof requested to create a block.
 
-Validators place funds at risk as **the stake**. For any given block, a validator is selected in pseudo-random fashion with preference to validators with the largest stakes. While PoS systems generally do not reward validators with new coins, validators receive **transaction fees** in return for generating blocks the rest of the network accepts.
+Validators place funds at risk as **the stake**. For any given block, a validator is selected in a pseudo-random fashion with a preference for validators with the largest stakes. While PoS systems generally do not reward validators with new coins, validators receive **transaction fees** in return for generating blocks the rest of the network accepts.
 
 Validators face **economic penalties** when they generate blocks that are rejected by sizable numbers of other nodes. A validator is thus incentivized to generate blocks that are likely to be accepted by the network and face economic punishment when it fails to do so. This is vital as a successful Proof-of-Stake system must address the **problem of "nothing at stake"**. That is, randomly-selected validators must face:
 
@@ -841,7 +841,7 @@ In this type of consensus mechanism, so-called **"witnesses"** are elected by th
 
 ![Delegated-Proof-of-Stake (DPoS)](./images/delegated-proof-of-stake.png)
 
-Witnesses are paid fees for creating and validating blocks. This economic incentive and a limited number of witnesses lead to competition potentially increasing with each new member. In case a witness misbehaves, the network's community can withdraw their votes for a single witness - kind of like firing the witness. Witnesses that do no longer hold enough votes lose their income basis.
+Witnesses are paid fees for creating and validating blocks. This economic incentive and a limited number of witnesses lead to competition potentially increasing with each new member. In case a witness misbehaves, the network's community can withdraw their votes for a single witness - kind of like firing the witness. Witnesses that no longer hold enough votes lose their income basis.
 
 Alongside ascribing the role of witnesses to some participants, DPoS networks also elect **"delegates"**. Delegates are a group of participants that supervise network governance and performance, and propose changes that are then voted on by the entire network.
 
@@ -857,7 +857,7 @@ Similar to how solving the guessing game with computing power in PoW establishes
 
 **Proof-of-Importance (PoI)**
 
-The starting idea with **proof-of-importance (PoI)** is to solve the "rich man gets richer" problem that arises in PoS algorithms. PoI networks have a similar rationale like PoS but prevent hoarding as a means to increase prosperity and "nothing-at-stake" problems with the use of an "importance score".
+The starting idea with **proof-of-importance (PoI)** is to solve the "rich man gets richer" problem that arises in PoS algorithms. PoI networks have a similar rationale to PoS but prevent hoarding as a means to increase prosperity and "nothing-at-stake" problems with the use of an "importance score".
 The protocol rewards network activity based on an **"importance score"**.
 
 Similar to PoS, nodes invest a stake in the network to be eligible for selection. In the case of PoI, the stake invested is calculated from a set of variables (amount of transactions to and from an address, whether a node is part of a cluster, etc.) included in the score. The probability to be chosen to build new blocks increases with the value of the importance score.
@@ -866,7 +866,7 @@ Proof-of-importance (PoI) is implemented in <a href="https://nem.io/">NEM</a>, a
 
 <HighlightBox type="info">
 
-NEM is a blockchain platform that was launched in March 2015 and the name of the corresponding cryptocurrency. NEM has stood out as multiple ledgers can simultaneaosly coexist on one single blockchain, and faster transaction speed and scalability are promised. NEM offers a wide range of features and a commercial blockchain option called **Mijin**.
+NEM is a blockchain platform that was launched in March 2015 and is the name of the corresponding cryptocurrency. NEM has stood out as multiple ledgers can simultaneously coexist on one single blockchain, and faster transaction speed and scalability are promised. NEM offers a wide range of features and a commercial blockchain option called **Mijin**.
 
 </HighlightBox>
 
@@ -874,11 +874,11 @@ NEM is a blockchain platform that was launched in March 2015 and the name of the
 
 **Proof-of-activity (PoA)** is a combination of PoW and PoS. The miner creates a template with the nonce and deploys it to the network. Then the signers are chosen by the block hash of this template. If the template is signed by the signers, it becomes a block. In the end, the reward is shared between the miner and signers. The algorithm is called proof-of-activity because only participants with a **full online node** can get a reward.
 
-The process split into its PoW and PoS components:
+The process is split into its PoW and PoS components:
 
 * Miners compete in a computer-power-driven guessing game to find the next block - just as in PoW.
 * After a block is mined, it contains a header and the reward address of the miner - like in PoS.
-* Nodes are selected as validators depending on the stake of coins they hold - second PoS component. The higher the stake, the more probable it is to be selected as a validator.
+* Nodes are selected as validators depending on the stake of coins they hold - the second PoS component. The higher the stake, the more probable it is to be selected as a validator.
 * The validated block becomes part of the blockchain, and the fees and rewards are transferred to the miners and validators.
 
 As a combination of PoW and PoS, PoA networks can also suffer from high energy consumption, like PoW ones, and coin hoarding. PoA also inherits algorithms' benefits, like strong decentralization and security against 51%-attacks.
@@ -891,7 +891,7 @@ For a more in-depth look at PoW, PoS, and PoA: [Proof of Activity: Extending Bit
 
 **Proof-of-Capacity (PoC)**
 
-**Proof-of-capacity (PoC)** uses the memory or hard disk drive (HDD) of a user to reach consensus. It is often also referred to as Proof-of-Space (PoSpace). In PoC, the user signals its interest and stake by dedicating an amount of their HDDs to the mining process. First, it creates and stores hashes. Then it selects parts of the data considering the last block header in the blockchain. The selected data is hashed and must fulfill a given difficulty.
+**Proof-of-capacity (PoC)** uses the memory or hard disk drive (HDD) of a user to reach consensus. It is often also referred to as Proof-of-Space (PoSpace). In PoC, the user signals its interest and stake by dedicating a number of their HDDs to the mining process. First, it creates and stores hashes. Then it selects parts of the data considering the last block header in the blockchain. The selected data is hashed and must fulfill a given difficulty.
 
 PoC is designed to be fairer because memory access times do not vary as much as the central processing unit's (CPU) power. PoC decentralizes mining even more than PoW algorithms. In addition, it has a lower energy consumption than PoW.
 
@@ -980,7 +980,7 @@ In software engineering, **forking** describes a process in which a developer wo
 
 </HighlightBox>
 
-If still undecided, you then have a **fork**, or two competing truths. The order of blocks continues on **two different paths**; the chain of blocks splits up into two strands. As further blocks are added to each side of the fork, the two chains can both continue building their respective chain. Nodes re-evaluate each chain for length and complexity and potentially decide which side of the fork to keep working with. Each blockchain protocol provides a mechanism to eventually choose a single branch of the fork. Forks are introduced as a **_mean to reach consensus even when the community is not of the same opinion_**. In the end, eventual consensus is reached and with it also **consistency** across the states each node has.
+If still undecided, you then have a **fork**, or two competing truths. The order of blocks continues on **two different paths**; the chain of blocks splits up into two strands. As further blocks are added to each side of the fork, the two chains can both continue building their respective chain. Nodes re-evaluate each chain for length and complexity and potentially decide which side of the fork to keep working with. Each blockchain protocol provides a mechanism to eventually choose a single branch of the fork. Forks are introduced as a **_mean to reach consensus even when the community does not agree_**. In the end, eventual consensus is reached and with it also **consistency** across the states each node has.
 
 ![Example of a fork](/onboarding/1-introduction-blockchain/images/blockchain-forking.png)
 
@@ -1001,7 +1001,7 @@ An **uncle** is a block that was mined after someone found the correct block hea
 
 ![Uncles](/onboarding/1-introduction-blockchain/images/uncles.png)
 
-Uncles fulfill an important **function**: they help **incentivize mining** and with it **decrease centralization** trends. On the Ethereum network, miners are incentivized to include uncles in the blocks they mine by rewarding such blocks. Uncle mining helps maintain a **larger number of miners**, preventing large mining pools by also incentivizing small mining pools and individual miners to continue participating in the consensus process. Uncles also help **compensate for network delays** since a miner can be rewarded even when a network delay made it come in second. In addition, uncles help **increase chain security**, as mining an uncle and mining the main chain block is conducted through the same mechanism.
+Uncles fulfill an important **function**: they help **incentivize mining** and with it **decrease centralization** trends. On the Ethereum network, miners are incentivized to include uncles in the blocks they mine by rewarding such blocks. Uncle mining helps maintain a **larger number of miners**, preventing large mining pools by also incentivizing small mining pools and individual miners to continue participating in the consensus process. Uncles also help **compensate for network delays** since a miner can be rewarded even when a network delay made it come in second. In addition, uncles help **increase chain security**, as mining an uncle and mining the main chain block are conducted through the same mechanism.
 
 Uncles can also create issues for a blockchain. Including uncles can bloat the network with blocks that have invalid or very little data - leading to **network distention**. Moreover, uncle rewards can incentivize miners to just **mine empty blocks**, as it is cheaper to include an uncle than create a valid-but-forgotten block. Empty uncle blocks do not fulfill any purpose, but they are still rewarded. This could become an issue in the future.
 
@@ -1015,7 +1015,7 @@ An **intentional fork** is as the name suggests intentionally generated by eithe
 * **Soft forks**
 
 A **hard fork** represents _a change in the protocol of a blockchain that is not backward-compatible_. 
-It is not backward-compatible because the *new rules* for validating are different to such an extent that the *old rules* would see *new-rule blocks* as invalid. Therefore, all nodes would have to accept the change and implement it by using the *new rules* to maintain a unified rule for validation. If a group of nodes objects to using the *new rules* and continue using the *old rules*, a fork occurs.
+It is not backward-compatible because the *new rules* for validating are different to such an extent that the *old rules* would see *new-rule blocks* as invalid. Therefore, all nodes would have to accept the change and implement it by using the *new rules* to maintain a unified rule for validation. If a group of nodes objects to using the *new rules* and continues using the *old rules*, a fork occurs.
 
 <ExpansionPanel title="A hard fork example - the story of the DAO">
 
@@ -1049,11 +1049,11 @@ If a hard fork is a change in the rules of a blockchain, what is a **soft fork**
 
 A **soft fork** is _a change of the protocol with which the rules enforced are restricted_. Thus, it is backward-compatible.
 
-A soft fork can also result in the chain splitting up. This happens, when blocks are created under the *old rules* and then regarded invalid by the *new rules*. A valid block under the *old rules* can become invalid under the *new rules* by nodes that are implementing these rules. Soft forks are often used to update the blockchain's protocol.
+A soft fork can also result in the chain splitting up. This happens, when blocks are created under the *old rules* and then regarded as invalid by the *new rules*. A valid block under the *old rules* can become invalid under the *new rules* by nodes that are implementing these rules. Soft forks are often used to update the blockchain's protocol.
 
 #### Immutability 
 
-**Immutability** refers to the _unchangeability of objects over time and/or the inability to perform changes_. In the case of blockchains, once data has been included in the blockchain editing or deleting it is nearly impossible. In blockchain technology, the use of hashes creating a chain of blocks ensure a high degree of immutability and easy tampering detection. If a participant tries to remove or edit data, the block’s hash and chain would fail. In addition, the changes could only be introduced by using the consensus mechanism of the network.
+**Immutability** refers to the _unchangeability of objects over time and/or the inability to perform changes_. In the case of blockchains, once data has been included in the blockchain editing or deleting it is nearly impossible. In blockchain technology, the use of hashes creating a chain of blocks ensures a high degree of immutability and easy tampering detection. If a participant tries to remove or edit data, the block’s hash and chain would fail. In addition, the changes could only be introduced by using the consensus mechanism of the network.
 
 <HighlightBox type="info">
 
@@ -1097,7 +1097,7 @@ The amount of time it takes a blockchain network to confirm a transaction (laten
 
 There are different **types of finality** in blockchains, depending on the underlying consensus mechanism a protocol relies on:
 
-* **Probabilistic finality:** describes the finality of a transaction dependent on how probable reverting a block is - the probability of removing a transaction. The more blocks come after the block containing a specific transaction, the less probable a transaction may be reverted, as _longest_ or _heaviest chain rules_ apply in the case of forks.
+* **Probabilistic finality:** describes the finality of a transaction dependending on how probable reverting a block is - the probability of removing a transaction. The more blocks come after the block containing a specific transaction, the less probable a transaction may be reverted, as _longest_ or _heaviest chain rules_ apply in the case of forks.
 * **Absolute finality:** or deterministic finality, is a trait of protocols based on PoS. Finality comes as soon as a transaction and block are verified. There are no scenarios in which a transaction could be revoked after it has been finalized.
 
 <ExpansionPanel title="The CAP Theorem and finality">
@@ -1108,11 +1108,11 @@ The CAP Theorem states that when partition is given as in blockchain networks, y
 
 While absolute finality can be more desirable than probabilistic finality, there are some **trade-offs** to consider: users making payments will most probably favor absolute finality, but decentralized applications (dApps) might require availability over consistency.
 
-When it comes to payments, probabilistic finality opens up a network to transactions only being less or more probably final but not "final final". Blocks changing could lead to the loss of millions of dollars. dApps might require transactions to always go through even when they include minor mistakes. Finality largely affects the user experience. Thinking about finality is essential to develop robust blockchain platforms and choose which platform to develop applications for.
+When it comes to payments, probabilistic finality opens up a network to transactions only being less or more probably final but not "final final". Blocks changing could lead to the loss of millions of dollars. dApps might require transactions to always go through even when they include minor mistakes. Finality largely affects the user experience. Thinking about finality is essential to developing robust blockchain platforms and choosing which platform to develop applications for.
 
 <ExpansionPanel title="Finality in PoS consensus">
 
-How does the consensus mechanism affect finality? Take a look at an example for PoS consensus and the finality it establishes: Tendermint.
+How does the consensus mechanism affect finality? Take a look at an example of PoS consensus and the finality it establishes: Tendermint.
 
 Tendermint provides absolute finality. It relies on Proof-of-Stake (PoS) with delegation and [Practical Byzantine Fault Tolerance (BFT)](https://github.com/tendermint/tendermint). Participants signal support for well-behaved, reliable nodes that create and confirm blocks, and users signal support by staking the native token of a chain. Staking bears the possibility of acquiring a share of the network transaction fees, but also the risk of reduced returns or even losses should the node become unreliable.
 
@@ -1142,9 +1142,6 @@ Tendermint aims at high performance and is based on dedicated validators with go
 
 </HighlightBox>
 
-## Quick recap
-
-
-
 ## Next up
 
+Now that you revised the technological background that makes blockchain possible, you are ready to dive into more details regarding blockchain tech in the [next section](./blockchain-tech-details.md).
