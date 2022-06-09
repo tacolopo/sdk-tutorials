@@ -1,15 +1,15 @@
 ---
-title: "Consensus"
+title: "Technical Background of Blockchain Technology - Consensus"
 order: 6
 description: Consensus in decentralized networks
 tag: fast-track
 ---
 
-# Consensus
+# Technical Background of Blockchain Technology - Consensus
 
-A blockchain is a well-ordered set of data on which all peers *eventually* agree. What they agree on is considered as the single truth. Reached by consensus, the **single truth** is the **_single true state of the distributed ledger_**. **Consensus has to be reached to guarantee data consistency.**
+A blockchain is a well-ordered set of data on which all peers *eventually* agree. What they agree on is considered the single truth. Reached by consensus, the **single truth** is the **_single true state of the distributed ledger_**. **Consensus has to be reached to guarantee data consistency.**
 
-![Blockchain as a consensus network](images/blockchain-as-a-consensus-network.png)
+![Blockchain as a consensus network](/onboarding/1-introduction-blockchain/images/blockchain-as-a-consensus-network.png)
 
 This section presents a closer look at consensus in blockchain technology by starting with the Byzantine Generals problem and how it can be resolved, then providing an overview of consensus mechanisms in blockchain, addressing immutability and also eventual consensus.
 
@@ -19,7 +19,7 @@ The **Byzantine Generals Problem** is a consensus-reaching problem scenario, whi
 
 What is the Byzantine Generals Problem?
 
-![Visualization Byzantine Generals Problem](images/generals.png)
+![Visualization Byzantine Generals Problem](/onboarding/1-introduction-blockchain/images/generals.png)
 
 Imagine a trio of generals whose armies surround a target city. The generals are physically far away from each other and can only communicate via messengers, who could fail to deliver messages and/or acknowledgments, or even forge false ones; the generals can only use **unsecured communication channels**. Even the generals themselves have questionable loyalty and do not necessarily trust one another. The siege can only be won if the generals work together. But how can the generals reach consensus on whether they want to attack or retreat, and if they want to attack when to exactly do it?
 
@@ -27,11 +27,9 @@ Imagine a trio of generals whose armies surround a target city. The generals are
 
 Similar to the generals who must decide when to attack, in a distributed ledger the agreed transaction list has to be identified and consensus on the correct order of transactions has to be reached.
 
-As individual transactions are sent to the network from individual nodes, each node must pass, or fail to pass transactions to other nodes. Not all nodes will see the same transactions at the same time because of the time delay required for data to physically travel across the network (physical latencies). Each node must therefore build its order of transactions.
+As individual transactions are sent to the network from individual nodes, each node must pass, or fail to pass transactions to other nodes. Not all nodes will see the same transactions at the same time because of the time delay required for data to physically travel across the network (physical latencies). Each node must therefore build its order of transactions. Since all nodes participate equally, there is **no authoritative order of transactions**. Still, the network must decide which node's version, or any version, of the truth will be the authoritative truth.
 
-Since all nodes participate equally, there is **no authoritative order of transactions**. Still, the network must decide which node's version, or any version, of the truth will be the authoritative truth.
-
-![Blockchain as a consensus network](images/blockchain-as-a-consensus-network.png)
+![Blockchain as a consensus network](/onboarding/1-introduction-blockchain/images/blockchain-as-a-consensus-network.png)
 
 ## A solution - consensus mechanisms
 
@@ -42,7 +40,7 @@ Since all nodes participate equally, there is **no authoritative order of transa
 
 The main functions of such mechanisms are to:
 
-* **Order transactions**;
+* **Order transactions**.
 * **Validate transactions**.
 
 <HighlightBox type="info">
@@ -53,7 +51,7 @@ Consensus algorithms establish **safety** and **liveness** by generating consens
 
 <ExpansionPanel title="General types of consensus algorithms">
 
-Consensus algorithms can be differentiated into **lottery-based** such as PoW and **voting-based algorithms**, like for example in the case of Delegated-Proof-of-Stake.
+Consensus algorithms can be differentiated into **lottery-based** such as PoW and **voting-based algorithms**, for example in the case of Delegated-Proof-of-Stake.
 
 In lottery-based algorithms, nodes creating blocks are randomly selected in a mechanism strongly resembling a lottery. These algorithms are said to have **high scalability** but at the same time a tendency of producing **forks** and with it a **high-latency finality**. With increased block creation time the probability of another peer creating a new block before receiving the just created one can result in numerous forks. This leads to an instance that has to be solved to achieve finality.
 
@@ -69,23 +67,19 @@ To summarize, lottery-based algorithms have good speed and scalability but are s
 
 </ExpansionPanel>
 
-Using PoW to obtain consensus was one of the innovations introduced by Bitcoin in addition to the chain of blocks. Since then, many other consensus algorithms have emerged. The academic community had introduced consensus algorithms even before Bitcoin.
-
-Let us have a look at some of the most popular consensus algorithms.
+Using Proof-of-Work (PoW) to obtain consensus was one of the innovations introduced by Bitcoin in addition to the chain of blocks, but the academic community had introduced consensus algorithms even before Bitcoin. Since then, many other consensus algorithms have emerged. Have a look at some of the most popular consensus algorithms.
 
 ### Practical Byzantine Fault Tolerance (pBFT)
 
 pBFT was first introduced in 1999. This consensus algorithm is envisioned for asynchronous systems like the internet and was optimized to allow for high performance.
 
-<HighlightBox type="info">
+<HighlightBox type="docs">
 
-If you are curious, take a look at the [paper by Miguel Castro and Barbara Liskov](http://pmg.csail.mit.edu/papers/osdi99.pdf) here</a>, in which the Practical Byzantine Fault Tolerance algorithm was presented.
+If you are curious, take a look at the [paper by Miguel Castro and Barbara Liskov](http://pmg.csail.mit.edu/papers/osdi99.pdf), in which the Practical Byzantine Fault Tolerance algorithm was presented.
 
 </HighlightBox>
 
-pBFT focuses on providing a **practical Byzantine state machine replication**, which can tolerate malicious nodes by assuming independent node failures and manipulated messages. The main aim of the algorithm is to promote consensus of **all honest nodes**.
-
-This assumption translates into a **practical requirement** for the network: the number of malicious nodes cannot simultaneously equal or exceed 1/3 of all nodes. This can be ensured the more nodes there are in the system: the more nodes, the more unlikely it is that malicious nodes can reach 1/3.
+pBFT focuses on providing a **practical Byzantine state machine replication**, which can tolerate malicious nodes by assuming independent node failures and manipulated messages. The main aim of the algorithm is to promote consensus of **all honest nodes**. This assumption translates into a **practical requirement** for the network: the number of malicious nodes cannot simultaneously equal or exceed 1/3 of all nodes. This can be ensured the more nodes there are in the system: the more nodes, the more unlikely it is that malicious nodes can reach 1/3.
 
 pBFT is a three-phase protocol where the client sends a request to a so-called primary. In the first phase, the primary broadcasts the request with a sequence number to the replicas. Then the replicas agree on the sequence number and create a message. If a certain number of the same message is reached, the message is verified and replicas agree on the order for requests within a view. In the end, the replicas send the reply to the client.
 
@@ -114,7 +108,7 @@ For a more detailed look at pBFT, take a look at the article from Brian Curran [
 
 ### Proof-of-Work (PoW)
 
-Remember our generals? Byzantine Fault Tolerance can be achieved if the loyal (non-faulty) generals reach a majority agreement on their attack strategy (consensus). **Proof-of-Work (PoW)** is one way to achieve BFT.
+Remember the generals? Byzantine Fault Tolerance can be achieved if the loyal (non-faulty) generals reach a majority agreement on their attack strategy (consensus). **Proof-of-Work (PoW)** is one way to achieve BFT.
 
 PoW is a cryptographic puzzle first introduced with [Hashcash](http://www.hashcash.org/). This consensus algorithm was reused in Bitcoin and has been widely adopted since then.
 
@@ -128,7 +122,7 @@ When the miner combines this number with ordered transactions in a block, it res
 * A `1/4` chance of getting a hash that starts with `00`;
 * A `1/1024` chance of getting a hash that starts with `0000000000`.
 
-The only way to find a nonce that returns the desired value is to repeatedly try random values. The miner node that finds an answer has most probably tried a large number of times. Finding the number is considered as evidence of considerable effort, or proof that a lot of work must have been invested in the search. This is why the process is called *Proof-of-Work*.
+The only way to find a nonce that returns the desired value is to repeatedly try random values. The miner node that finds an answer has most probably tried a large number of times. Finding the number is considered evidence of considerable effort, or proof that a lot of work must have been invested in the search. This is why the process is called *Proof-of-Work*.
 
 <HighlightBox type="info">
 
@@ -140,7 +134,7 @@ Nodes conduct their searches independently. Each node or miner uses its computin
 
 <HighlightBox type="info">
 
-According to the [Digiconomist's Bitcoin Energy Consumption Index](https://digiconomist.net/bitcoin-energy-consumption), Bitcoin currently consumes 204.50 TWh of electricity every year - about the same as Thailand.
+Look up the current energy consumption of Bitcoin with the [Digiconomist's Bitcoin Energy Consumption Index](https://digiconomist.net/bitcoin-energy-consumption).
 
 </HighlightBox>
 
@@ -150,19 +144,15 @@ Why is that?
 
 If a party holds more than 51% of the total mining power, that party in the long run always holds a probabilistic advantage over other miners and with it can dictate the true state of the blockchain by in the end mining the longest chain.
 
-Here **difficulty** comes into play. Difficulty is the term used for the mechanism controlling the amount of work involved in mining. The probabilistic number of times a miner has to try is a measure of difficulty.
-
-Difficulty guarantees a given average block creation time. PoW networks set a target average time for a solution to be found by **any** miner/node on the network. The difficulty of the task adjusts **according to the total problem-solving capacity of the network** to compensate for increasing/decreasing network capacity. That means PoW networks do not get faster even if more computing power is added. Rather they become more resilient by **increasing difficulty**, which raises the threshold a 51% attacker needs to overcome.
+Here **difficulty** comes into play. Difficulty is the term used for the mechanism controlling the amount of work involved in mining. The probabilistic number of times a miner has to try is a measure of difficulty. Difficulty guarantees a given average block creation time. PoW networks set a target average time for a solution to be found by **any** miner/node on the network. The difficulty of the task adjusts **according to the total problem-solving capacity of the network** to compensate for increasing/decreasing network capacity. That means PoW networks do not get faster even if more computing power is added. Rather they become more resilient by **increasing difficulty**, which raises the threshold a 51% attacker needs to overcome.
 
 ### Proof-of-Stake (PoS)
 
 **Proof-of-Stake (PoS)** is another method of selecting the authoritative node for a given block. PoS is based on the assumption that those with the most to lose are the most incentivized to safeguard network integrity. PoS solves the energy problem in PoW as "work", the use of energy through computational power, is not the proof requested to create a block.
 
-Validators place funds at risk as **the stake**. For any given block, a validator is selected in pseudo-random fashion with preference to validators with the largest stakes. While PoS systems generally do not reward validators with new coins, validators receive **transaction fees** in return for generating blocks the rest of the network accepts.
+Validators place funds at risk as **the stake**. For any given block, a validator is selected in a pseudo-random fashion with a preference for validators with the largest stakes. While PoS systems generally do not reward validators with new coins, validators receive **transaction fees** in return for generating blocks the rest of the network accepts.
 
-Validators face **economic penalties** when they generate blocks that are rejected by sizable numbers of other nodes. A validator is thus incentivized to generate blocks that are likely to be accepted by the network and face economic punishment when it fails to do so.
-
-A successful Proof-of-Stake system must address the **problem of "nothing at stake"**. That is, randomly-selected validators must face:
+Validators face **economic penalties** when they generate blocks that are rejected by sizable numbers of other nodes. A validator is thus incentivized to generate blocks that are likely to be accepted by the network and face economic punishment when it fails to do so. This is vital as a successful Proof-of-Stake system must address the **problem of "nothing at stake"**. That is, randomly-selected validators must face:
 
 * A disincentive for bad behavior with, for example, extracting a penalty from validators for emitting opinions that are ultimately rejected by the network;
 * A high probability that bad behavior is detected - the burden of detection usually falls on the rest of the network that can either accept or reject the validator's opinion.
@@ -173,23 +163,21 @@ An extension of proof-of-stake algorithms is called **Delegated-Proof-of-Stake (
 
 <HighlightBox type="info">
 
-Delegated-Proof-of-Stake (DPoS) is a consensus mechanism developed by Daniel Larimer as a reaction to Bitcoin's high energy consumption and potential centralization in mining. DPOS is much faster compared to other consensus algorithms like PoW.
+Delegated-Proof-of-Stake (DPoS) is a consensus mechanism developed by Daniel Larimer as a reaction to Bitcoin's high energy consumption and potential centralization in mining. DPoS is much faster compared to other consensus algorithms like PoW.
 
 </HighlightBox>
 
 In this type of consensus mechanism, so-called **"witnesses"** are elected by the stakeholders of the network to secure the network. Afterward, several witnesses are chosen for the block creation to represent at least 50% of the stakeholders' votes.
 
-![Delegated-Proof-of-Stake (DPoS)](images/delegated-proof-of-stake.png)
+![Delegated-Proof-of-Stake (DPoS)](./images/delegated-proof-of-stake.png)
 
-Witnesses are paid fees for creating and validating blocks. This economic incentive and a limited number of witnesses lead to competition potentially increasing with each new member.
-
-In case a witness misbehaves, the network's community can withdraw their votes for a single witness - kind of like firing the witness. Witnesses that do no longer hold enough votes lose their income basis.
+Witnesses are paid fees for creating and validating blocks. This economic incentive and a limited number of witnesses lead to competition potentially increasing with each new member. In case a witness misbehaves, the network's community can withdraw their votes for a single witness - kind of like firing the witness. Witnesses that no longer hold enough votes lose their income basis.
 
 Alongside ascribing the role of witnesses to some participants, DPoS networks also elect **"delegates"**. Delegates are a group of participants that supervise network governance and performance, and propose changes that are then voted on by the entire network.
 
 Many consider DPoS algorithms superior to PoW and PoS because of their fast block creation, high degree of security, energy efficiency, level of integrity, and democratic structure.
 
-<ExpansionPanel title="Want more consensus algorithms?">
+<ExpansionPanel title="More consensus algorithms">
 
 **Proof-of-Burn (PoB)**
 
@@ -199,7 +187,7 @@ Similar to how solving the guessing game with computing power in PoW establishes
 
 **Proof-of-Importance (PoI)**
 
-The starting idea with **proof-of-importance (PoI)** is to solve the "rich man gets richer" problem that arises in PoS algorithms. PoI networks have a similar rationale like PoS but prevent hoarding as a means to increase prosperity and "nothing-at-stake" problems with the use of an "importance score".
+The starting idea with **proof-of-importance (PoI)** is to solve the "rich man gets richer" problem that arises in PoS algorithms. PoI networks have a similar rationale to PoS but prevent hoarding as a means to increase prosperity and "nothing-at-stake" problems with the use of an "importance score".
 The protocol rewards network activity based on an **"importance score"**.
 
 Similar to PoS, nodes invest a stake in the network to be eligible for selection. In the case of PoI, the stake invested is calculated from a set of variables (amount of transactions to and from an address, whether a node is part of a cluster, etc.) included in the score. The probability to be chosen to build new blocks increases with the value of the importance score.
@@ -208,7 +196,7 @@ Proof-of-importance (PoI) is implemented in <a href="https://nem.io/">NEM</a>, a
 
 <HighlightBox type="info">
 
-NEM is a blockchain platform that was launched in March 2015 and the name of the corresponding cryptocurrency. NEM has stood out as multiple ledgers can simultaneaosly coexist on one single blockchain, and faster transaction speed and scalability are promised. NEM offers a wide range of features and a commercial blockchain option called **Mijin**.
+NEM is a blockchain platform that was launched in March 2015 and is the name of the corresponding cryptocurrency. NEM has stood out as multiple ledgers can simultaneously coexist on one single blockchain, and faster transaction speed and scalability are promised. NEM offers a wide range of features and a commercial blockchain option called **Mijin**.
 
 </HighlightBox>
 
@@ -216,11 +204,11 @@ NEM is a blockchain platform that was launched in March 2015 and the name of the
 
 **Proof-of-activity (PoA)** is a combination of PoW and PoS. The miner creates a template with the nonce and deploys it to the network. Then the signers are chosen by the block hash of this template. If the template is signed by the signers, it becomes a block. In the end, the reward is shared between the miner and signers. The algorithm is called proof-of-activity because only participants with a **full online node** can get a reward.
 
-The process split into its PoW and PoS components:
+The process is split into its PoW and PoS components:
 
 * Miners compete in a computer-power-driven guessing game to find the next block - just as in PoW.
 * After a block is mined, it contains a header and the reward address of the miner - like in PoS.
-* Nodes are selected as validators depending on the stake of coins they hold - second PoS component. The higher the stake, the more probable it is to be selected as a validator.
+* Nodes are selected as validators depending on the stake of coins they hold - the second PoS component. The higher the stake, the more probable it is to be selected as a validator.
 * The validated block becomes part of the blockchain, and the fees and rewards are transferred to the miners and validators.
 
 As a combination of PoW and PoS, PoA networks can also suffer from high energy consumption, like PoW ones, and coin hoarding. PoA also inherits algorithms' benefits, like strong decentralization and security against 51%-attacks.
@@ -233,7 +221,7 @@ For a more in-depth look at PoW, PoS, and PoA: [Proof of Activity: Extending Bit
 
 **Proof-of-Capacity (PoC)**
 
-**Proof-of-capacity (PoC)** uses the memory or hard disk drive (HDD) of a user to reach consensus. It is often also referred to as Proof-of-Space (PoSpace). In PoC, the user signals its interest and stake by dedicating an amount of their HDDs to the mining process. First, it creates and stores hashes. Then it selects parts of the data considering the last block header in the blockchain. The selected data is hashed and must fulfill a given difficulty.
+**Proof-of-capacity (PoC)** uses the memory or hard disk drive (HDD) of a user to reach consensus. It is often also referred to as Proof-of-Space (PoSpace). In PoC, the user signals its interest and stake by dedicating a number of their HDDs to the mining process. First, it creates and stores hashes. Then it selects parts of the data considering the last block header in the blockchain. The selected data is hashed and must fulfill a given difficulty.
 
 PoC is designed to be fairer because memory access times do not vary as much as the central processing unit's (CPU) power. PoC decentralizes mining even more than PoW algorithms. In addition, it has a lower energy consumption than PoW.
 
@@ -249,7 +237,7 @@ A **trusted execution environment (TEE)** is a secure area of the processor that
 
 </HighlightBox>
 
-![PoET](images/poet.png)
+![PoET](/onboarding/1-introduction-blockchain/images/poet.png)
 
 The lottery provides every validator with a randomized wait time - **createWaitTimer** in the diagram. The fastest validator becomes the leader. The leader is eligible to create a block after the allotted time. The new block must be accepted by the rest of the network to ensure BFT. The leader is eligible to create a block after the allotted time. The new block must be accepted by the rest of the network.
 
@@ -274,7 +262,7 @@ Looking for some general points on the advantages and disadvantages of different
 
 ## *Eventual* consensus
 
-In colloquial understanding, consensus refers to a general agreement in a group. To understand consensus in blockchain technology, remember that the truth is the state all participants agree upon. Consensus is eventual in blockchain because blocks are created as transactions are performed. Thus, what is agreed upon depends on the operations taking place.
+To understand consensus in blockchain technology, remember that the truth is the state all participants agree upon. Consensus is eventual in blockchain because blocks are created as transactions are performed. Thus, what is agreed upon depends on the operations taking place.
 
 Take a look at why eventual consensus is important and how consensus is reached in case of competing claims.
 
@@ -284,15 +272,13 @@ Remember that blockchain is a distributed system that keeps track of a shared le
 
 The **CAP Theorem**, also known as *Brewer's theorem* after Eric Brewer, states that in a distributed system you can at most pick two out of the following three:
 
-* **Consistency:** each node sees the same data all the time;
-* **Availability:** data is always available, so any data request is answered with a response;
+* **Consistency:** each node sees the same data all the time.
+* **Availability:** data is always available, so any data request is answered with a response.
 * **Partition tolerance:** the distributive system is always operational, even when a subset of nodes fails to operate.
 
 When for example partition tolerance is given, you have to decide whether you want to promote consistency or availability. When choosing availability over consistency when partition is given (the distributed system is operational and requests receive a response), data could be out of date and the response could thus include outdated data. Choosing consistency over availability when partition is given (the distributed system is operational and data is up to date) could lead to the system failing to be available for the network's participants.
 
-Blockchain aims for perfect availability and reaches eventual consistency by making partitions (unintentional forks) economically uninteresting. Partition is a necessity in distributed networks, thus only the trade-off between consistency and availability needs to be considered when designing a network.
-
-**Partition tolerance** becomes a given as blockchains are decentralized and therefore, operational even when several nodes are no longer operational; blockchains have partition tolerance because of their decentralized nature. A key difference between a centralized system and a distributed one is that for the distributed *service* to be shut down, an attacker would need to take all its nodes down. **Availability** is essential for blockchains as the state has to be accessible to all nodes. Thus, blockchains offer availability as it is part of the foundations of the general architecture.
+Blockchain aims for perfect availability and reaches eventual consistency by making partitions (unintentional forks) economically uninteresting. Partition is a necessity in distributed networks, thus only the trade-off between consistency and availability needs to be considered when designing a network. **Partition tolerance** becomes a given as blockchains are decentralized and therefore, operational even when several nodes are no longer operational; blockchains have partition tolerance because of their decentralized nature. A key difference between a centralized system and a distributed one is that for the distributed *service* to be shut down, an attacker would need to take all its nodes down. **Availability** is essential for blockchains as the state has to be accessible to all nodes. Thus, blockchains offer availability as it is part of the foundations of the general architecture.
 
 A blockchain node could be flooded in the same way, thereby forcing it off the network. A key difference between a centralized system and a distributed one is that for the distributed *service* to be shut down, an attacker would need to take all its nodes down. This is how blockchain ensures partition tolerance.
 
@@ -304,7 +290,7 @@ For a good read on blockchain and the CAP Theorem, read [CryptoGraphics: CAP The
 
 </HighlightBox>
 
-Blockchain networks can reach all three properties of the CAP Theorem with time by focusing on availability and partition tolerance, and reaching consistency with the help of consensus algorithms. As is the case with consensus, consistency is eventual. It is reached over time by for example mining and block production in general.
+Blockchain networks can reach all three properties of the CAP Theorem with time by focusing on availability and partition tolerance, and reaching **consistency** with the help of consensus algorithms. As is the case with consensus, consistency is eventual. It is reached over time by for example mining and block production in general.
 
 ### Forking
 
@@ -314,9 +300,7 @@ A valid block is **a well-ordered set of transactions**. Every block contains th
 
 </ExpansionPanel>
 
-Imagine you have a chain of blocks. Now, two blocks are suggested for the next free position in the chain. 
-
-Remember the lottery analogy: what happens when more than one person has a winning ticket?
+Imagine you have a chain of blocks. Now, two blocks are suggested for the next free position in the chain. Remember the lottery analogy: what happens when more than one person has a winning ticket?
 
 In this case, other nodes would receive competing claims about the winner. However, individual nodes are unlikely to receive both claims simultaneously. The protocol selects the block with the most transactions or with the most complex puzzle solved.
 
@@ -326,15 +310,15 @@ In software engineering, **forking** describes a process in which a developer wo
 
 </HighlightBox>
 
-If still undecided, you then have a **fork**, or two competing truths. The order of blocks continues on **two different paths**; the chain of blocks splits up into two strands. As further blocks are added to each side of the fork, the two chains can both continue building their respective chain. Nodes re-evaluate each chain for length and complexity and potentially decide which side of the fork to keep working with. Each blockchain protocol provides a mechanism to eventually choose a single branch of the fork. Forks are introduced as a **_mean to reach consensus even when the community is not of the same opinion_**. In the end, eventual consensus is reached and with it also **consistency** across the states each node has.
+If still undecided, you then have a **fork**, or two competing truths. The order of blocks continues on **two different paths**; the chain of blocks splits up into two strands. As further blocks are added to each side of the fork, the two chains can both continue building their respective chain. Nodes re-evaluate each chain for length and complexity and potentially decide which side of the fork to keep working with. Each blockchain protocol provides a mechanism to eventually choose a single branch of the fork. Forks are introduced as a **_mean to reach consensus even when the community does not agree_**. In the end, eventual consensus is reached and with it also **consistency** across the states each node has.
 
-![Example of a fork](images/blockchain-forking.png)
+![Example of a fork](/onboarding/1-introduction-blockchain/images/blockchain-forking.png)
 
 Forks are often a result of changes made to the blockchain protocol: as a blockchain network evolves, so does the protocol. The changes made to the protocol can be minor but also major. When a block introduces a protocol change, which is not supported unanimously, a fork can result. The network separates into two different groups. Both groups use a different version of the blockchain protocol.
 
 When talking about forks, it is important to note that they can be differentiated in:
 
-* **Accidental forks** 
+* **Accidental forks**
 * **Intentional forks**
 
 **Accidental forks** occur when two or more miners find a block almost at the same time. Thus, both blocks have the same block height. This type of fork is a direct result of decentralization.
@@ -345,9 +329,9 @@ The fork is solved in many protocols with the rule: **the longest chain is the o
 
 An **uncle** is a block that was mined after someone found the correct block header. Uncles are called orphans in Bitcoin. It is a way to reward miners for almost being the first to solve the puzzle correctly. Mining an uncle does not lead to the same reward as mining a regular new block. In **Bitcoin** for example, mining an uncle/orphan does not lead to a reward at all.
 
-![Uncles](images/uncles.png)
+![Uncles](/onboarding/1-introduction-blockchain/images/uncles.png)
 
-Uncles fulfill an important **function**: they help **incentivize mining** and with it **decrease centralization** trends. On the Ethereum network, miners are incentivized to include uncles in the blocks they mine by rewarding such blocks. Uncle mining helps maintain a **larger number of miners**, preventing large mining pools by also incentivizing small mining pools and individual miners to continue participating in the consensus process. Uncles also help **compensate for network delays** since a miner can be rewarded even when a network delay made it come in second. In addition, uncles help **increase chain security**, as mining an uncle and mining the main chain block is conducted through the same mechanism.
+Uncles fulfill an important **function**: they help **incentivize mining** and with it **decrease centralization** trends. On the Ethereum network, miners are incentivized to include uncles in the blocks they mine by rewarding such blocks. Uncle mining helps maintain a **larger number of miners**, preventing large mining pools by also incentivizing small mining pools and individual miners to continue participating in the consensus process. Uncles also help **compensate for network delays** since a miner can be rewarded even when a network delay made it come in second. In addition, uncles help **increase chain security**, as mining an uncle and mining the main chain block are conducted through the same mechanism.
 
 Uncles can also create issues for a blockchain. Including uncles can bloat the network with blocks that have invalid or very little data - leading to **network distention**. Moreover, uncle rewards can incentivize miners to just **mine empty blocks**, as it is cheaper to include an uncle than create a valid-but-forgotten block. Empty uncle blocks do not fulfill any purpose, but they are still rewarded. This could become an issue in the future.
 
@@ -361,7 +345,7 @@ An **intentional fork** is as the name suggests intentionally generated by eithe
 * **Soft forks**
 
 A **hard fork** represents _a change in the protocol of a blockchain that is not backward-compatible_. 
-It is not backward-compatible because the *new rules* for validating are different to such an extent that the *old rules* would see *new-rule blocks* as invalid. Therefore, all nodes would have to accept the change and implement it by using the *new rules* to maintain a unified rule for validation. If a group of nodes objects to using the *new rules* and continue using the *old rules*, a fork occurs.
+It is not backward-compatible because the *new rules* for validating are different to such an extent that the *old rules* would see *new-rule blocks* as invalid. Therefore, all nodes would have to accept the change and implement it by using the *new rules* to maintain a unified rule for validation. If a group of nodes objects to using the *new rules* and continues using the *old rules*, a fork occurs.
 
 <ExpansionPanel title="A hard fork example - the story of the DAO">
 
@@ -395,11 +379,11 @@ If a hard fork is a change in the rules of a blockchain, what is a **soft fork**
 
 A **soft fork** is _a change of the protocol with which the rules enforced are restricted_. Thus, it is backward-compatible.
 
-A soft fork can also result in the chain splitting up. This happens, when blocks are created under the *old rules* and then regarded invalid by the *new rules*. A valid block under the *old rules* can become invalid under the *new rules* by nodes that are implementing these rules. Soft forks are often used to update the blockchain's protocol.
+A soft fork can also result in the chain splitting up. This happens, when blocks are created under the *old rules* and then regarded as invalid by the *new rules*. A valid block under the *old rules* can become invalid under the *new rules* by nodes that are implementing these rules. Soft forks are often used to update the blockchain's protocol.
 
 ### Immutability 
 
-**Immutability** refers to the _unchangeability of objects over time and/or the inability to perform changes_. In the case of blockchains, once data has been included in the blockchain editing or deleting it is nearly impossible. In blockchain technology, the use of hashes creating a chain of blocks ensure a high degree of immutability and easy tampering detection. If a participant tries to remove or edit data, the block’s hash and chain would fail. In addition, the changes could only be introduced by using the consensus mechanism of the network.
+**Immutability** refers to the _unchangeability of objects over time and/or the inability to perform changes_. In the case of blockchains, once data has been included in the blockchain editing or deleting it is nearly impossible. In blockchain technology, the use of hashes creating a chain of blocks ensures a high degree of immutability and easy tampering detection. If a participant tries to remove or edit data, the block’s hash and chain would fail. In addition, the changes could only be introduced by using the consensus mechanism of the network.
 
 <HighlightBox type="info">
 
@@ -424,16 +408,16 @@ Each block of the blockchain is identified by:
 
 For a malicious node to remove or insert transactions, it would need to:
 
-* Update the root hash of the containing the block's Merkle tree;
-* Update the nonce of the containing block;
-* Update the hash of the containing block;
+* Update the root hash of the containing the block's Merkle tree.
+* Update the nonce of the containing block.
+* Update the hash of the containing block.
 * Do the same for all subsequent blocks.
 
 This is theoretically possible in a PoW network, but in practice requires the malicious nodes to harness more processing power than the honest nodes. A node will almost certainly end up connecting to an honest node during its life. This honest node would tell the new node a different truth from that of the malicious nodes, after which the new node would need to make a decision. It will always decide to go with the **longest or more difficult fork**.
 
-We say the blockchain is **immutable** because of the practical difficulty to include new or change old data.
+It is said that the blockchain is **immutable** because of the practical difficulty to include new or change old data.
 
-## Block creation and finality
+### Block creation and finality
 
 **Finality** in blockchain refers to the guarantee that transactions, blocks, and in the end, the state cannot be altered, reversed, or manipulated after a block is validated and becomes part of the chain. In practice, network latency influences finality. Therefore, finality is used to measure the amount of time you have to wait to consider a transaction final and then part of the immutable blockchain ledger.
 
@@ -443,7 +427,7 @@ The amount of time it takes a blockchain network to confirm a transaction (laten
 
 There are different **types of finality** in blockchains, depending on the underlying consensus mechanism a protocol relies on:
 
-* **Probabilistic finality:** describes the finality of a transaction dependent on how probable reverting a block is - the probability of removing a transaction. The more blocks come after the block containing a specific transaction, the less probable a transaction may be reverted, as _longest_ or _heaviest chain rules_ apply in the case of forks.
+* **Probabilistic finality:** describes the finality of a transaction dependending on how probable reverting a block is - the probability of removing a transaction. The more blocks come after the block containing a specific transaction, the less probable a transaction may be reverted, as _longest_ or _heaviest chain rules_ apply in the case of forks.
 * **Absolute finality:** or deterministic finality, is a trait of protocols based on PoS. Finality comes as soon as a transaction and block are verified. There are no scenarios in which a transaction could be revoked after it has been finalized.
 
 <ExpansionPanel title="The CAP Theorem and finality">
@@ -454,12 +438,11 @@ The CAP Theorem states that when partition is given as in blockchain networks, y
 
 While absolute finality can be more desirable than probabilistic finality, there are some **trade-offs** to consider: users making payments will most probably favor absolute finality, but decentralized applications (dApps) might require availability over consistency.
 
-When it comes to payments, probabilistic finality opens up a network to transactions only being less or more probably final but not "final final". Blocks changing could lead to the loss of millions of dollars.
-dApps might require transactions to always go through even when they include minor mistakes. Finality largely affects the user experience. Thinking about finality is essential to develop robust blockchain platforms and choose which platform to develop applications for.
+When it comes to payments, probabilistic finality opens up a network to transactions only being less or more probably final but not "final final". Blocks changing could lead to the loss of millions of dollars. dApps might require transactions to always go through even when they include minor mistakes. Finality largely affects the user experience. Thinking about finality is essential to developing robust blockchain platforms and choosing which platform to develop applications for.
 
 <ExpansionPanel title="Finality in PoS consensus">
 
-How does the consensus mechanism affect finality? Take a look at an example for PoS consensus and the finality it establishes: Tendermint.
+How does the consensus mechanism affect finality? Take a look at an example of PoS consensus and the finality it establishes: Tendermint.
 
 Tendermint provides absolute finality. It relies on Proof-of-Stake (PoS) with delegation and [Practical Byzantine Fault Tolerance (BFT)](https://github.com/tendermint/tendermint). Participants signal support for well-behaved, reliable nodes that create and confirm blocks, and users signal support by staking the native token of a chain. Staking bears the possibility of acquiring a share of the network transaction fees, but also the risk of reduced returns or even losses should the node become unreliable.
 
@@ -467,7 +450,11 @@ Network participants are incentivized to provide/withdraw support for validators
 
 Tendermint aims at high performance and is based on dedicated validators with good network connectivity. This is quite different from PoW, which favors inclusion and must accommodate slower nodes with greater latency and less reliability, resulting in probabilistic finality. Tendermint prefers consistency over availability.
 
+</ExpansionPanel>
+
 <HighlightBox type="reading">
+
+**Further readings:**
 
 * [Bentov, I. et al.: Proof-of-Activity: Extending Bitcoin’s Proof of Work via Proof of Stake](https://eprint.iacr.org/2014/452.pdf)
 * [Castro, M. & Liskov, B. (1999): Practical Byzantine Fault Tolerance](http://pmg.csail.mit.edu/papers/osdi99.pdf)
@@ -486,3 +473,5 @@ Tendermint aims at high performance and is based on dedicated validators with go
 </HighlightBox>
 
 ## Next up
+
+Now that you revised the technological background that makes blockchain possible, you are ready to dive into more details regarding blockchain tech in the [next section](./blockchain-tech-details.md).
