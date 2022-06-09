@@ -421,18 +421,36 @@ It is said that the blockchain is **immutable** because of the practical difficu
 
 **Finality** in blockchain refers to the guarantee that transactions, blocks, and in the end, the state cannot be altered, reversed, or manipulated after a block is validated and becomes part of the chain. In practice, network latency influences finality. Therefore, finality is used to measure the amount of time you have to wait to consider a transaction final and then part of the immutable blockchain ledger.
 
+<ExpansionPanel title="The CAP Theorem and finality">
+
+The CAP Theorem states that when partition is given as in blockchain networks, you can choose between consistency and availability. Whereas, a network with consistency rather halts inaccurate transactions than letting them through. A network preferring availability continues even with inaccurate transactions. Consistency-favoring systems provide BFT finality and availability-favoring systems provide probabilistic finality.
+
+</ExpansionPanel>
+
 Finality is an essential feature of blockchains. Without finality, a blockchain network cannot serve properly as a network for assets with value, payment, or immutable ledger. In blockchain, transactions are termed immutable due to blockchain's finality nature. However, most blockchain protocols only have **probabilistic (transaction) finality** — transactions are not automatically or instantly final but become more final over time as more blocks are confirmed.
 
 The amount of time it takes a blockchain network to confirm a transaction (latency) determines the nature of the chain's finality rate.
 
-There are different **types of finality** in blockchains, depending on the underlying consensus mechanism a protocol relies on:
+There are different **types of finality** in blockchains, depending on the underlying consensus mechanism a protocol relies on.
 
-* **Probabilistic finality:** describes the finality of a transaction dependending on how probable reverting a block is - the probability of removing a transaction. The more blocks come after the block containing a specific transaction, the less probable a transaction may be reverted, as _longest_ or _heaviest chain rules_ apply in the case of forks.
-* **Absolute finality:** or deterministic finality, is a trait of protocols based on PoS. Finality comes as soon as a transaction and block are verified. There are no scenarios in which a transaction could be revoked after it has been finalized.
+<Accordion :items="
+    [
+        {
+            title: 'Probabilistic finality',
+            description: '**Probabilistic finality** describes the finality of a transaction dependending on how probable reverting a block is - the probability of removing a transaction. The more blocks come after the block containing a specific transaction, the less probable a transaction may be reverted, as _longest_ or _heaviest chain rules_ apply in the case of forks.'
+        },
+        {
+            title: 'Absolute finality',
+            description: '**Absolute finality** or deterministic finality, is a trait of protocols based on PoS. Finality comes as soon as a transaction and block are verified. There are no scenarios in which a transaction could be revoked after it has been finalized.'
+        }
+    ]
+"/>
 
-<ExpansionPanel title="The CAP Theorem and finality">
+<ExpansionPanel title="Finality in PoW and PoS networks">
 
-The CAP Theorem states that when partition is given as in blockchain networks, you can choose between consistency and availability. Whereas, a network with consistency rather halts inaccurate transactions than letting them through. A network preferring availability continues even with inaccurate transactions. Consistency-favoring systems provide BFT finality and availability-favoring systems provide probabilistic finality.
+Proof-of-Stake (PoS) networks can have absolute finality because the total staked amount is known at all times. It takes a _public_ transaction to stake, and another to unstake. If some majority of the stakers agree on a block, then the block can be considered "final" because there is no process that could overturn the consensus.
+
+This is different from PoW networks, where the total hashing capacity is unknown; it can only be estimated by a combination of the puzzle's difficulty and the speed at which new blocks are issued. Hashing capacity can be added or removed simply by turning machines on or off. When hashing capacity is removed too abruptly it results in a drop in the network transaction throughput, as blocks suddenly fail to be issued around the target interval.
 
 </ExpansionPanel>
 
@@ -440,7 +458,7 @@ While absolute finality can be more desirable than probabilistic finality, there
 
 When it comes to payments, probabilistic finality opens up a network to transactions only being less or more probably final but not "final final". Blocks changing could lead to the loss of millions of dollars. dApps might require transactions to always go through even when they include minor mistakes. Finality largely affects the user experience. Thinking about finality is essential to developing robust blockchain platforms and choosing which platform to develop applications for.
 
-<ExpansionPanel title="Finality in PoS consensus">
+<ExpansionPanel title="An example of finality in PoS - Tendermint">
 
 How does the consensus mechanism affect finality? Take a look at an example of PoS consensus and the finality it establishes: Tendermint.
 

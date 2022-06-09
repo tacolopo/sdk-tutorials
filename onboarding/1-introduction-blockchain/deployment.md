@@ -1,70 +1,37 @@
 ---
-title: "Deployment Patters"
+title: "Blockchain Technology in More Detail - Deployment Patters"
 order: 8
-description: The evolution of deployment patterns
+description: The evolution of deployment patterns - from general-purpose to application-specific chains
 tag: fast-track
 ---
 
-WIP --> Will combine this section with the origins section and place it as the last section to then arch into the Cosmos introduction
-
-# Blockchain technology evolution - from general-purpose to application-specific chains
+# Blockchain Technology in More Detail - Deployment Patters
 
 Blockchain was developed as a **decentralized technology** that allows the operation of an infrastructure without hierarchy or authority.
 
 <HighlightBox type="tip">
 
-It is important to keep the technical foundations discussed in the previous Module in mind to understand the different deployment patterns and protocols presented in this Module.
+It is important to keep the technical foundations discussed in the previous sections in mind to understand the different deployment patterns and protocols presented in this section.
 
 </HighlightBox> 
 
-There are several mechanisms essential to ensure the working of a blockchain, one of these are consensus algorithms used to determine a well-ordered state of transactions and ensure network security. Blockchains cannot be only differentiated by the consensus mechanism included in their protocols but also the deployment pattern they follow.
+Before further looking at blockchain deployment patterns, briefly peek into a few more concepts: decentralized subsystems, multi-dimensional decentralization, and the minimum Nakamoto coefficient. A closer look at decentralization helps understand why it is a main criterion to distinguish deployment patterns.
 
-Whereas, in this context **deployment patterns** are understood as _the general set-up of a blockchain network_. There are **two basic different deployment patterns** for blockchains: 
+## Decentralized subsystems & systems
 
-* Public
-* Managed/private
+Remember that networks can be decentralized, distributed, centralized, or a mix of both.
 
-![Public and managed network comparison](images/comparison-public-vs-rivate.png)
-
-**Public blockchains** represent the classic understanding of how a blockchain network is constituted: they are decentralized and allow for public access. **Managed blockchain networks**, as opposed to public networks, rely on the blockchain data structure but unlike public blockchain networks, do not have to mitigate the Byzantine Generals Problem because they operate in a predictable environment with elements of authority and hierarchy. As their name suggests, they are private in a sense because most allow for authentication, authorization, and permission of actions. Therefore, they are often more suitable for traditional businesses that want to make use of the technology for internal or collaborative purposes without operating on public networks.
-
-The **deployment pattern has major implications on the functioning of the network**: What a network is supposed to do and how it is going to fulfill the envisioned tasks depends on its deployment pattern. 
-
-<ExpansionPanel title="What are permissioned/permissionless blockchains?">
-
-In blockchain literature, one often stumbles across the terms **permissioned** and **permissionless**. The more one reads about it, the more confusing it becomes, and the more difficult it is to grasp what the term actually refers to. 
-
-In **permissioned blockchains**, *an individual or group of participants holds the authority to validate blocks of transactions or to participate in the consensus mechanism*. Permissioned blockchains restrict the actor's involvement regarding the consensus state. In addition, it is important to keep in mind that permissioned networks restrict participants' access to smart contract creation and/or transactions. Permissionless blockchains are the opposite. Block verification, smart contract creation, and transactions on permissionless blockchain networks are open to all members.
-
-The terms permissioned and private, and permissionless (also referred to as non-permissioned) and public are often used synonymously, but it is essential to understand the difference between the terms and what they entail.
-
-</ExpansionPanel>
-
-The main way to differentiate between blockchains is to consider their **form of access**. The form of access refers to:
-
-* Whether there is a distinction between users or not;
-* Whether the access to the blockchain is open/public or controlled/private.
-
-<ExpansionPanel title="Decentralized subsystems & systems">
-
-Before further looking at blockchain deployment patterns, briefly peek into a few more concepts: decentralized subsystems, multi-dimensional decentralization, and the minimum Nakamoto coefficient. 
-A closer look at decentralization helps understand why it is a main criterion to distinguish deployment patterns.
-
-Networks can be decentralized, distributed, centralized, or a mix of both.
-
-![Network types](images/PaulBaran.png)
+![Network types](/onboarding/1-introduction-blockchain/images/PaulBaran.png)
 
 Broken down, a blockchain is a distributed ledger that records all transactions on the chain. Nodes in such a distributed ledger need to have a copy of said ledger, as well as constantly remain in communication with the network that continuously runs without ever being offline. A blockchain requires a high degree of resilience and scalability due to it being a distributed P2P network with an expected growing number of nodes and processing necessities.
 
-<HighlightBox type="info">
-
-**Measuring decentralization**
+<ExpansionPanel title="Measuring decentralization - the minimum Nakamoto coefficient">
 
 There are serval propositions and methods to measure decentralization. The use of the _**Gini coefficient**_ and _**Lorenz curve**_ are often proposed as means to quantitatively measure decentralization. Another useful tool is the _**minimum Nakamoto coefficient**_, as proposed by Balaji S. Srinivasan and Leland Lee (see: [Quantifying Decentralization](https://news.earn.com/quantifying-decentralization-e39db233c28e)). The authors argue that quantifying decentralization and utilising a coefficient to measure decentralization are of importance to not only make measurement possible, but also improvement and optimization.
 
 The _**minimum Nakamoto coefficient**_ quantifies the number of entities that are required to be compromised to compromise the system as a whole, in other words it is: _the minimum number of entities in a given subsystem required to get the total capacity, aggregated by taking the minimum of the minimum across the subsystems_. The higher the coefficient, the higher the number of entities required to compromise the system is.
 
-</HighlightBox>
+</ExpansionPanel>
 
 Balaji S. Srinivasan and Leland Lee argue that **decentralized systems are constituted by decentralized subsystems** and one must take a closer look at the **subsystem decentralization** to understand the degree of decentralization. The underlying assumption is that subsystems of a decentralized system are essential to the decentralization of the overall system. For this reason, decentralization can also be seen as multi-dimensional instead of dichotomous. Multi-dimensionality also encourages us to broaden our view when analysing decentralization and thinking of possible network vulnerabilities.
 
@@ -79,39 +46,131 @@ To better illustrate the concept of systems and subsystems, **Bitcoin** is a fit
 
 Subsystems can differ from the ones mentioned above and can be chosen freely as long as they fulfill the criterion of being **essential to the decentralization of the whole system**.
 
+Now, that you revised decentralization conceptually, it is time for deployment patterns in blockchain technology.
+
+## Deployment patterns in blockchain
+
+There are several mechanisms essential to ensure the working of a blockchain, one of these are consensus algorithms used to determine a well-ordered state of transactions and ensure network security. Blockchains cannot be only differentiated by the consensus mechanism included in their protocols but also the deployment pattern they follow. Whereas, in this context **deployment patterns** are understood as _the general set-up of a blockchain network_.
+
+There are **two basic different deployment patterns** for blockchains: 
+
+* Public
+* Managed/private
+
+![Public and managed network comparison](/onboarding/1-introduction-blockchain/images/comparison-public-vs-rivate.png)
+
+**Public blockchains** represent the classic understanding of how a blockchain network is constituted: they are decentralized and allow for public access. **Managed blockchain networks**, as opposed to public networks, rely on the blockchain data structure but unlike public blockchain networks, do not have to mitigate the Byzantine Generals Problem because they operate in a predictable environment with elements of authority and hierarchy. As their name suggests, they are private in a sense because most allow for authentication, authorization, and permission of actions. Therefore, they are often more suitable for traditional businesses that want to make use of the technology for internal or collaborative purposes without operating on public networks.
+
+The **deployment pattern has major implications on the functioning of the network**: what a network is supposed to do and how it is going to fulfill the envisioned tasks depends on its deployment pattern. 
+
+The main way to differentiate between blockchains is to consider their **form of access**. The form of access refers to:
+
+* Whether there is a distinction between users or not.
+* Whether the access to the blockchain is open/public or controlled/private.
+
+<ExpansionPanel title="What are permissioned/permissionless blockchains?">
+
+In blockchain literature, one often stumbles across the terms **permissioned** and **permissionless**. The more one reads about it, the more confusing it becomes, and the more difficult it is to grasp what the term actually refers to. 
+
+In **permissioned blockchains**, *an individual or group of participants holds the authority to validate blocks of transactions or to participate in the consensus mechanism*. Permissioned blockchains restrict the actor's involvement regarding the consensus state. In addition, it is important to keep in mind that permissioned networks restrict participants' access to smart contract creation and/or transactions. Permissionless blockchains are the opposite. Block verification, smart contract creation, and transactions on permissionless blockchain networks are open to all members.
+
+The terms permissioned and private, and permissionless (also referred to as non-permissioned) and public are often used synonymously, but it is essential to understand the difference between the terms and what they entail.
+
+</ExpansionPanel>
+
+### Public networks
+
+The most obvious way of operating blockchain protocols comes in form of a public network. This is what blockchain technology was originally invented for and remains arguably its most powerful use.
+
+![Public network](/onboarding/1-introduction-blockchain/images/public-network.png)
+
+A public blockchain, compared to a private or managed one, is characterised by **open access**. Every participant has access to data and can validate as well as add blocks in public blockchains. Anyone, without needing the permission of another authority, can write and read data. Because network participants are not vetted and can add to the ledger without needing approval, public blockchains incorporate ways to arbitrate discrepancies and include defence mechanisms against attacks. 
+Thus, guarding against malicious participants is not required, i.e. there is no barrier to entry, and no access control system needs to be in place. 
+The beauty of the public network lies among others in its **self-defence** attribute. In addition, public blockchains benefit from demand-side economies of scale, also called **network effects**.
+
+A proof-of-work based public blockchain network, such as Bitcoin or Ethereum, has a few **specific attributes**:
+
+* **Accessibility:** All you need to connect to Bitcoin or Ethereum is the client software and an internet connection. No AML, KYC, identity checks, or subscription payment is required.
+* **No hierarchy:** All nodes are equal, meaning no individual node has more authority than another. All validators are also equal.
+* **Crypto-economic incentives:** The lack of a central authority means there is no absolute defense against malicious behavior. Instead, the network usually incentivizes benevolent behavior and disincentivizes behavior that endangers the network functioning. It de facto implements prohibitive expenses to attack the network and others, and thus ensures security and proper function.
+* **Full decentralization:** Many public networks are completely decentralized because they are non-hierarchical and fully accessible. The playing field for market participants is therefore relatively level, so traditional business models may not work as well.
+
+The two most popular examples of functioning public networks are Bitcoin and Ethereum.
+
+<ExpansionPanel title="Introduction to Bitcoin">
+
+Since 2009, the most successful and popular decentralized public blockchain network has been Bitcoin. Nowadays, Bitcoin is the cryptocurrency with the highest market capitalization.
+
+<HighlightBox type="tip">
+
+For an estimate of the Bitcoin network size take a look at [Bitnodes](https://bitnodes.earn.com/). Also if you are more of a visual and statistics person, [Bitcoin charts](https://www.blockchain.com/en/charts) can be highly recommended.
+
+</HighlightBox>
+
+
+
+
+Bitcoin was first introduced with the publication of the original paper [*Bitcoin: A peer-to-peer electronic cash system*](https://bitcoin.org/bitcoin.pdf) (2008) by Satoshi Nakamoto. In this paper, Nakamoto describes Bitcoin as a **peer-to-peer (P2P)** version of electronic cash. He suggested that **proof-of-work (PoW)** can be used to find the truth in a partially synchronous system without involving trusted parties. Using this method, the set of participants controlling the majority of the computing power determine the truth.
+
+Nakamoto does not use the term blockchain in his paper but he describes the concept by explaining transactions in Bitcoin. **Transactions** are sent directly from user to user without the need of an intermediary. They are verified by the nodes and then recorded on the blockchain, a distributed ledger. The transaction process requires the signing of the transaction with the **hash of the previous transaction**. This establishes a chain of ownership.
+
+The **chain of ownership** goes back to the essence of blockchain technology. The main argument is that with complete transparency every user can recreate every transaction that has ever been verified back to the genesis block and the corresponding order of the transactions. As the term already implies the ownership of every single cryptocurrency unit can be traced back to each transaction in which ownership was transferred. Thus, every participant is able to verify a new payment and make sure no double-spending is taking place.
+
+Each bitcoin is registered to a so-called **bitcoin address** by picking a random private key and then computing the corresponding address. Computing the address is **practically secure** because computing it might be fast but computing the private key by using the address is *mathematically unfeasible*. It is comparable to the different forms of secrecy that were discussed in regard to public-key crypto systems. In addition, the number of possible private keys which are valid is so high that *brute force attacks* are also seen as unfeasible.
+
+Moreover, Bitcoins can only be spent, if the owner knows the *corresponding key* and *digitally signs* the transaction. The network can verify the signing with a public key.
+
+In the end, one has a chain of ownership.
+
+In Bitcoin, nodes optimize the concept of chain of ownership because they validate a chain once and all unspent transactions are stored. With this it is avoided that one would have to re-check the validity of the transaction by going back to genesis block every single time. Without a private key a bitcoin user does not have a mean to proof ownership. Therefore, losing the private key equals losing all your bitcoins.
+
+Transactions can contain several **inputs**, a record of the bitcoin address from which the Bitcoins were initially received, and **outputs**, the public key or bitcoin address to where the Bitcoins are meant to be send.
+
+Each block includes the hash from the previous block and a nonce -a random string of `1`s and `0`s. The protocol calls for a hash beginning with a specific number of 0-bits when hashing the block. An attacker trying to change a transaction in a block would have to mine the block at that point in the chain and the following blocks to reproduce the part of the blockchain that is going to be tampered with.
+
+![Chain of block with previous hash](/onboarding/1-introduction-blockchain/images/bitcoin-block-headers.png)
+
+_Reproduced from [Nakamoto, S. (2008): Bitcoin: A peer-to-peer electronic cash system](https://bitcoin.org/bitcoin.pdf)._
+
+To avoid double-spending Bitcoin uses a **timestamp server**. The miner is looking for a nonce, which results in a block hash beginning with the right number of 0-bits. It is difficult to find a nonce that fulfils this condition and it is easy to verify when one has. This becomes more difficult as other blocks are chained after this one, because a new nonce has to be found for each block.
+
+Note that the **truth** is the longest chain in which the network is most invested.
+
+There is a residual probability for a slower attacker to catch up, since getting nonces works by brute force. This decreases exponentially with the number of blocks. The higher the number of blocks, the lower the probability of an attacker catching up.
+
+The protocol includes a **reward** for mining. This reward is the first special transaction in the block. It can be expected, that the nodes will use their CPU power honestly to get the reward.
+
+Because of the fact that transactions are announced publicly, the public key of the parties is not anonymous.
+
 </ExpansionPanel>
 
 
 
 
 
-## Public networks
 
-The most obvious way to operate a blockchain protocol is in the form of a public network. This is what blockchain technology was originally invented for and arguably remains its most powerful form of implementation.
 
-![Public Network](images/public-network.png)
 
-A public blockchain, compared to a private or managed one, is characterised by **open access**. 
-Every participant has access to data and can validate as well as add blocks in public blockchains. 
-Anyone, without needing the permission of another authority, can write and read data. 
-Because network participants are not vetted and can add to the ledger without needing approval, public blockchains incorporate ways to arbitrate discrepancies and include defence mechanisms against attacks. 
-Thus, guarding against malicious participants is not required, i.e. there is no barrier to entry, and no access control system needs to be in place. 
-The beauty of the public network lies among others in its **self-defence** attribute. In addition, public blockchains benefit from demand-side economies of scale, also called **network effects**.
 
-A proof-of-work based public blockchain network, such as Bitcoin or Ethereum, has a few specific attributes:
 
-* **accessibility**: All you need to connect to Bitcoin or Ethereum is the client software and an internet connection. No AML, KYC, identity checks or subscription payment is required.
-* **no hierarchy**: All nodes are equal, meaning no individual node has more authority than another. All miners are also equal;
-* **crypto-economic incentives**: The lack of a central authority means there is no absolute defence against malicious behaviour. Instead, the network usually incentivises benevolent behaviour and dis-incentivises behaviour that endangers the network functioning to de facto implement prohibitive expenses to attack the network and others;
-* **full decentralization**: Most public networks are completely decentralized because they are non-hierarchical and fully accessible. The playing field for market participants is therefore relatively level, so traditional business models may not work as well.
 
-## Managed networks
 
-A private or managed blockchain is different from a public network, because participants are known and trusted due to **access barriers**. 
-Participants are vetted through an access control layer that governs network access. 
-Thus, a private network does not have to rely on anonymous participants to validate transactions. 
 
-![Managed Network](images/managed-network.png)
+
+
+
+
+
+
+
+
+
+
+### Managed networks
+
+A private or managed blockchain is different from a public network, because participants are known and trusted due to **access barriers**. Participants are vetted through an access control layer that governs network access. Thus, a private network does not have to rely on anonymous participants to validate transactions. 
+
+![Managed network](/onboarding/1-introduction-blockchain/images/managed-network.png)
 
 Many mechanisms vital in public blockchains are not necessary for private blockchains. 
 For example, there is no need to discourage 51% attackers, because a 100% of resources for block creation are controlled by the network. 
@@ -137,7 +196,7 @@ Let us look at an example often used for consortium blockchain networks: **inter
 Currently each bank runs their own legacy infrastructure. 
 When these banks try and settle trades between their customers, their systems need to interact with each other often through several layers of third-party software.
 
-![Bank - Insurer - Central Bank Overview](images/private-blockchain-01.png)
+![Bank - Insurer - Central Bank Overview](/onboarding/1-introduction-blockchain/images/private-blockchain-01.png)
 
 Now, consider that all these banks are operating a common blockchain network only they have access to. 
 Rather than keeping their own versions of ledgers, they operate on the **same** ledger.
@@ -158,7 +217,7 @@ The difference between both deployment types becomes visible in direct compariso
 
 The difference between both deployment types becomes apparent when we compare them visually:
 
-![Schematic Difference of Private and Public Blockchains](images/Privatepublicschematic.png)
+![Schematic Difference of Private and Public Blockchains](/onboarding/1-introduction-blockchain/images/Privatepublicschematic.png)
 
 Often private and public blockchain network differences are explained by using an analogy: the difference between intranet and internet in the 1990s. 
 Whereas public blockchains are compared to the internet and private ones to the intranet.
@@ -169,7 +228,7 @@ Private blockchains are also criticised in regard to their degree of transparenc
 
 Different deployment patterns have their own benefits and drawbacks. They are also more or less suited to different intended network functions.
 
-![3 Deployment Patterns](images/3deployment_patterns.png)
+![3 Deployment Patterns](/onboarding/1-introduction-blockchain/images/3deployment_patterns.png)
 
 ## Why managed networks?
 
@@ -303,83 +362,6 @@ Collaborations also offer the opportunity to include all relevant stakeholders i
 
 
 
-# Introduction to Bitcoin
-
-Since 2009 the most successful and popular decentralized public blockchain network has been Bitcoin. 
-Nowadays, Bitcoin is the cryptocurrency with the highest market capitalisation, approximately $150 billion dollars (at the time of writing).
-
-<div class="b9-tip">
-	<p>For an estimate of the Bitcoin network size take a look at <a href="https://bitnodes.earn.com/"><i>Bitnodes</i></a>.</p>
-	<p>Also if you are more of a visual and statistics person, we could recommend these <a href="https://www.blockchain.com/en/charts">Bitcoin charts</a>.</p>
-</div>
-
-Cryptocurrencies have been vastly publicly discussed and evaluated since Bitcoin’s introduction. 
-The policy to handle this new type of currencies has been different in each country (See: [A World Map of Cryptocurrencies](https://blogs.thomsonreuters.com/answerson/wp-content/uploads/sites/3/2017/10/World-of-Cryptocurrencies-graphic.pdf)). 
-The role cryptocurrencies will play in future economic activities and every-day life is difficult to envision as the spectrum of opinions goes from cryptocurrency integration supporters to complete dismissal advocates.
-
-Bitcoin was first introduced with the publication of the original paper [*Bitcoin: A peer-to-peer electronic cash system*](https://bitcoin.org/bitcoin.pdf) (2008) by Satoshi Nakamoto. 
-In this paper, Nakamoto describes Bitcoin as a **peer-to-peer (P2P)** version of electronic cash.
-
-He suggested that **proof-of-work (PoW)** can be used to find the truth in a partially synchronous system without involving trusted parties. 
-Using this method, the set of participants controlling the majority of the computing power determine the truth.
-
-Let us look at this in more detail.
-
-Nakamoto does not use the term blockchain in his paper but he describes the concept by explaining transactions in Bitcoin.
-
-**Transactions** are sent directly from user to user without the need of an intermediary. 
-They are verified by the nodes and then recorded on the blockchain, a distributed ledger. 
-The transaction process requires the signing of the transaction with the **hash of the previous transaction**. 
-This establishes a chain of ownership.
-
-The **chain of ownership** goes back to the essence of blockchain technology. 
-The main argument is that with complete transparency every user can recreate every transaction that has ever been verified back to the genesis block and the corresponding order of the transactions. 
-As the term already implies the ownership of every single cryptocurrency unit can be traced back to each transaction in which ownership was transferred. 
-Thus, every participant is able to verify a new payment and make sure no double-spending is taking place.
-
-Each bitcoin is registered to a so-called **bitcoin address** by picking a random private key and then computing the corresponding address.
-
-Computing the address is **practically secure** because computing it might be fast but computing the private key by using the address is *mathematically unfeasible*. 
-It is comparable to the different forms of secrecy that were discussed in regard to public-key crypto systems.
-
-In addition, the number of possible private keys which are valid is so high that *brute force attacks* are also seen as unfeasible.
-
-Moreover, Bitcoins can only be spent, if the owner knows the *corresponding key* and *digitally signs* the transaction. 
-The network can verify the signing with a public key.
-
-In the end, one has a chain of ownership.
-
-In Bitcoin, nodes optimise the concept of chain of ownership because they validate a chain once and all unspent transactions are stored. 
-With this it is avoided that one would have to re-check the validity of the transaction by going back to genesis block every single time. 
-Without a private key a bitcoin user does not have a mean to proof ownership. 
-Therefore, losing the private key equals losing all your bitcoins.
-
-Transactions can contain several **inputs**, a record of the bitcoin address from which the Bitcoins were initially received, and **outputs**, the public key or bitcoin address to where the Bitcoins are meant to be send.
-
-Each block includes the hash from the previous block and a nonce -a random string of 1s and 0s. 
-The protocol calls for a hash beginning with a specific number of 0-bits when hashing the block. 
-An attacker trying to change a transaction in a block would have to mine the block at that point in the chain and the following blocks to reproduce the part of the blockchain that is going to be tampered with.
-
-![Chain of Block with Previous Hash](images/bitcoin-block-headers.png)
-
-**Figure 1:** Reproduced from [Nakamoto, S. (2008): Bitcoin: A peer-to-peer electronic cash system](https://bitcoin.org/bitcoin.pdf).
-
-To avoid double-spending Bitcoin uses a **timestamp server**. 
-The miner is looking for a nonce, which results in a block hash beginning with the right number of 0-bits. 
-It is difficult to find a nonce that fulfils this condition and it is easy to verify when one has. 
-This becomes more difficult as other blocks are chained after this one, because a new nonce has to be found for each block.
-
-Note that the **truth** is the longest chain in which the network is most invested.
-
-There is a residual probability for a slower attacker to catch up, since getting nonces works by brute force. 
-This decreases exponentially with the number of blocks. 
-The higher the number of blocks, the lower the probability of an attacker catching up.
-
-The protocol includes a **reward** for mining. 
-This reward is the first special transaction in the block. 
-It can be expected, that the nodes will use their CPU power honestly to get the reward.
-
-Because of the fact that transactions are announced publicly, the public key of the parties is not anonymous.
 
 
 
@@ -457,7 +439,7 @@ This can lead to performance issues in regard to the blockchain’s speed.
 Ethereum employs a different kind of implementation to Bitcoin called **GHOST**. 
 It includes **uncles** to decrease the average block time.
 
-![Blockchain and uncle diagram](images/ethereum-ghost.png)
+![Blockchain and uncle diagram](/onboarding/1-introduction-blockchain/images/ethereum-ghost.png)
 
 Uncles are validated blocks, that are propagated too late into the network. 
 This increases the total difficulty of the chain and makes smaller block times possible.
@@ -489,5 +471,3 @@ The fact that a couple of operations had a price in Gas that was too low compare
 The attacker, while paying a small Gas fee, managed to hold up a large portion of the nodes.
 
 The protocol was amended in a way that required [a hard fork](https://blog.ethereum.org/2016/10/13/announcement-imminent-hard-fork-eip150-gas-cost-changes/) and the vulnerable operations were repriced, rendering the attack too expensive to carry on.
-
-## Next up

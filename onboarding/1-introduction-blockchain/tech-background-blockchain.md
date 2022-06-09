@@ -9,7 +9,7 @@ tag: fast-track
 
 <HighlightBox type="learning">
 
-In the next sections, you are going to dive deeper into the tech background making blockchain protocols possible by:
+In the next sections, you are going to begin your blockchain journey with an introduction to the tech background making blockchain protocols possible by:
 
 * [Reviewing what networks and protocols are, as well as recapping the most central terms in networking - node, client, and server.](./tech-background-blockchain.md)
 * [Exploring in which way blockchains are distributed ledgers.](./ledgers.md)

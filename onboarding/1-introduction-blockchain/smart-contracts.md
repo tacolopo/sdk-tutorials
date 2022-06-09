@@ -1,13 +1,11 @@
 ---
-title: "Smart contracts"
+title: "Blockchain Technology in More Detail - Smart Contracts"
 order: 9
 description: 
 tag: fast-track
 ---
 
---> Curtail content
-
-# Introduction
+# Blockchain Technology in More Detail - Smart Contracts
 
 A contract is commonly known as a *formalisation of a relationship and/or transaction*. In common law a contract is understood as a *"meeting of minds"* -a meeting that entails an intricate play of trust building and relies on a legal system evolved through centuries with deep underlying traditions and understandings.
 

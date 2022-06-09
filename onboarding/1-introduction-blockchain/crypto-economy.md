@@ -554,3 +554,9 @@ Concluding, there are a number of barriers, but also great possible potentials a
 
 ## Next up
 
+
+
+Cryptocurrencies have been vastly publicly discussed and evaluated since Bitcoin’s introduction. The policy to handle this new type of currencies has been different in each country (See: [A World Map of Cryptocurrencies](https://blogs.thomsonreuters.com/answerson/wp-content/uploads/sites/3/2017/10/World-of-Cryptocurrencies-graphic.pdf)). The role cryptocurrencies will play in future economic activities and every-day life is difficult to envision as the spectrum of opinions goes from cryptocurrency integration supporters to complete dismissal advocates.
+
+
+
