@@ -1,11 +1,11 @@
 ---
-title: "Blockchain Technology in More Detail"
-order: 4
+title: "Blockchain Technology in More Detail - Historic Overview"
+order: 7
 description: From the first public blockchains to smart contracting 
 tag: fast-track
 ---
 
-# Blockchain Technology in More Detail
+# Blockchain Technology in More Detail - Historic Overview
 
 
 

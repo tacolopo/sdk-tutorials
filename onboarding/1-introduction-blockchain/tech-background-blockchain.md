@@ -11,17 +11,17 @@ tag: fast-track
 
 In the next sections, you are going to dive deeper into the tech background making blockchain protocols possible by:
 
-* Reviewing what networks and protocols are, as well as recapping the most central terms in networking - node, client, and server.
-* Exploring in which way blockchains are distributed ledgers.
-* Taking a closer look at public-key cryptography.
-* Diving into how consensus is reached in a decentralized network.
+* [Reviewing what networks and protocols are, as well as recapping the most central terms in networking - node, client, and server.](./tech-background-blockchain.md)
+* [Exploring in which way blockchains are distributed ledgers.](./ledgers.md)
+* [Taking a closer look at public-key cryptography.](./cryptographic-fundamentals.md)
+* [Diving into how consensus is reached in a decentralized network.](./consensus.md)
 * Revisiting the different conceptualizations of blockchains.
 
 </HighlightBox>
 
 In this section, you explore the technical background making blockchains possible. Starting with networks and protocols to then dive deeper into blockchains as a [ledger](./ledgers.md), as well as how [consensus](/consensus.md) is established in blockchains, and [cryptographic fundamentals](./cryptographic-fundamentals.md) of blockchain technology in the following sections.
 
-If you are thinking "this all sounds very familiar", do not worry: you can always go ahead to the sections for a closer look at blockchain technology itself - the [origins of blockchain technology](./), [deployment patterns in blockchain](./), and [smart contracts](./smart-contracts.md).
+If you are thinking "this all sounds very familiar", do not worry: you can always go ahead to the sections for a closer look at blockchain technology itself - the [origins of blockchain technology](./blockchain-tech-details), [deployment patterns in blockchain](./deployment.md), and [smart contracts](./smart-contracts.md).
 
 It is time to learn about networks. You will not go into too much depth, but a few concepts are relevant to understanding blockchain technology.
 
