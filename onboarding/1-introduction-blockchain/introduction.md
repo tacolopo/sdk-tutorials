@@ -48,7 +48,7 @@ Digital artifacts can be copied with ease. This presents obvious problems if you
 
 In the **current economic system**, currency systems rely on **central authorities** such as central banks, **third parties that manage and control financial transactions**, and **physical safeguards on banknotes** to prevent double-spending and counterfeiting. A third party such as a bank, credit card company, or payment service is used as a **trusted ledger keeper**. They all keep digital ledgers to avoid double-spending. Consequently, it is generally not possible for two parties to exchange value online without involving a trusted third party to handle the settlement process.
 
-![Regular transaction](images/regular-transaction.png)
+![Regular transaction](/onboarding/1-introduction-blockchain/images/regular-transaction.png)
 
 Things are different in the digital world. To gain a clear grasp of the double-spending problem with digital currencies, consider the following:
 
@@ -56,13 +56,13 @@ Things are different in the digital world. To gain a clear grasp of the double-s
 * Alice sends the same coins to Charlie in exchange for other goods or services.
 * Both Bob and Charlie deliver the goods or services but only one of them will be able to spend the received coins.
 
-![Double-spending problem: conflicting transaction](images/double-spending-problem-2.png)
+![Double-spending problem: conflicting transaction](/onboarding/1-introduction-blockchain/images/double-spending-problem-2.png)
 
 Double-spending is important for digital tokens because they could theoretically be spent more than once. Double-spending refers in the blockchain context to a situation in which **one** token is spent **twice or more** times.
 
 The double-spending problem in blockchain technology should be clearly distinguished from double-spending problems related to duplication and/or falsification, which can lead to inflation, currency devaluation, and distrust among currency holders. Problems from duplication and/or falsification are more related to digital cash systems and solved with a trusted central authority.
 
-![Double-spending problem: transaction via blockchain](images/double-spending-problem-3.png)
+![Double-spending problem: transaction via blockchain](/onboarding/1-introduction-blockchain/images/double-spending-problem-3.png)
 
 At a high level, blockchain solves the problem by **replacing the trusted central ledger-keeper with a network of ledger-keepers**. Each member of the network has an exact replica of the ledger and no one can append the ledger without achieving network consensus about it first, which requires at least a majority of nodes agreeing on the state of the ledger.
 
@@ -114,7 +114,7 @@ Since knowing the current hash of the latest valid version is a required input t
 
 Blockchain functions in a similar way. **Blocks of transactions** are appended using hashes of previous blocks as inputs into hashes of subsequent blocks. Any participant can quickly verify an unbroken chain of blocks and with it the **correct order**.
 
-![A chain of blocks: from the genesis block to the last version](images/genesis_block.png)
+![A chain of blocks: from the genesis block to the last version](/onboarding/1-introduction-blockchain/images/genesis_block.png)
 
 In blockchain, cryptographic hash functions are instrumental to empower participants and assure them that they possess an undistorted history of everything.
 
