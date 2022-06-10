@@ -346,8 +346,6 @@ Furthermore, platforms that allow for **smart contract execution** enable organi
 
 **Further readings:**
 
-* [Berke, A. (2017): How Safe Are Blockchains? It Depends](https://hbr.org/2017/03/how-safe-are-blockchains-it-depends)
-* [BlockApps](http://blockapps.net/)
 * [Haber, S. & Stornetta, W. S. (1991): How to Time-Stamp a Digital Document](https://www.anf.es/pdf/Haber_Stornetta.pdf)
 * [Levine, D. K.: What is Game Theory?](http://www.dklevine.com/general/whatis.htm)
 * [Srinivasan, B. S. (2017): Quantifying Decentralization](https://news.earn.com/quantifying-decentralization-e39db233c28e)
