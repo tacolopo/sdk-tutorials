@@ -68,6 +68,8 @@ The necessary breakthroughs included:
 * The advent of the internet and ubiquitous connectivity
 * Powerful client-side computers
 
+### Blockchain begnnings - The first public blockchain and cryptocurrency
+
 On October 31, 2008, an individual or group calling itself Satoshi Nakamoto proposed a **P2P network for a digital currency**, calling it **Bitcoin**. Bitcoin introduced a novel consensus mechanism, now referred to as Nakamoto Consensus, that uses Proof-of-Work (PoW) to enable nodes to reach agreement in a decentralized network. It became possible to send online payments directly between parties **independent of financial institutions and trusted third parties**. Bitcoin became the first public, decentralized payment application.
 
 <HighlightBox type="docs">
@@ -75,6 +77,8 @@ On October 31, 2008, an individual or group calling itself Satoshi Nakamoto prop
 Want to look closer at the initial proposition of Bitcoin? See the original [Bitcoin whitepaper - Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf).
 
 </HighlightBox>
+
+### The second generation - Ethereum as the first general-purpose chain and the beginning of private chains
 
 As soon as it became clear that the technology presents a very attractive base infrastructure for payments, other groups and organizations began adapting the technology for their purposes or developed new approaches using the same basic principles but adopting them to more traditional use cases. After the introduction of Bitcoin, several so-called "public chains" came into being - Ethereum was the first, many followed. These general-purpose blockchains aim to provide a decentralized network that allows the implementation of a variety of use cases.
 
