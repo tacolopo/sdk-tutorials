@@ -88,7 +88,18 @@ At the same time, smart contracts, like in Ethereum, are all run by the same vir
 
 ## Pros and cons of smart contracts
 
+- All BC pros:  speed, efficiency, accuracy, trust, transparency, security, savings
+- automation
+- decrease the possibility of third-party manipulation by eliminating the requirement for brokers or other intermediaries to ratify the already signed legal contracts. 
+- lack of an intermediary in smart contracts saves money
+- Dapp development
+- parties have complete visibility --> transparency
+- Immutability:  Smart contracts are encrypted, and cryptography protects all documents from being tampered with.
+-  smart contracts also eliminate errors that occur due to manual filling out of several forms.
 
+Cons
+- automated --> self-execution
+- 
 
 
 
