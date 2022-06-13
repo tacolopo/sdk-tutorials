@@ -31,7 +31,9 @@ Smart contracts are a main application area in blockchain technology. Understand
 
 <ExpansionPanel title="The beginnings of smart contracts">
 
-Let us backtrack to the 1990's when Nick Szabo first used the term smart contract in his [*Formalizing and Securing Relationships on Public Networks*](https://journals.uic.edu/ojs/index.php/fm/article/view/548/469). In his paper, Szabo introduces the possibility of efficiently transferring automated traditional contracts from common law into distributed protocols, especially in conjunction with digital transactions. He uses the example of a vending machine to break his proposition down into a real-life scenario. The vending machine is a contract with bearer: Those with a sufficient amount of coins can engage in an exchange and receive the goods offered.
+Let us backtrack to the 1990's when Nick Szabo first used the term smart contract in his [*Formalizing and Securing Relationships on Public Networks*](https://journals.uic.edu/ojs/index.php/fm/article/view/548/469). In his paper, Szabo introduces the possibility of efficiently transferring automated traditional contracts from common law into distributed protocols, especially in conjunction with digital transactions. He uses the example of a vending machine to break his proposition down into a real-life scenario.
+
+The vending machine is a contract with bearer: those with a sufficient amount of coins can engage in an exchange and receive the goods offered without the need for an actual person to take the money and hand over the item. Smart contracts in blockchain serve that same purpose but are much more versatile.
 
 <HighlightBox type="docs">
 
@@ -44,8 +46,6 @@ Szabo envisioned a world where contracts could be embedded in all kinds of prope
 Since Szabo’s article, we use the term **smart contract** to describe the transfer from a common law contract to computer code or programs. It can be understood as a legally binding contract in digital form, or as others put it, a computerised protocol that executes the terms of a common contract.
 
 Later, Szabo propsed a digital currency called BitGold. While the asset was never actually launched, this Bitcoin predecessor argumented in faovor of the use of smart contract as they could allow trustless transactions on the internet.
-
-
 
 Smart contracts later resurfaced with **distributed ledger technology (DLT)**. DLT revitalised the debate surrounding their advantages and usefulness, as well as potentials for application of smart contracts.
 
@@ -86,7 +86,7 @@ Smart contracts are account holding objects that contain code functions, usually
 
 At the same time, smart contracts, like in Ethereum, are all run by the same virtual machine. Thus, they share the same underlying environment and compete for resources. This can severely restrain performance. Even if the state machine is able to split in multiple subsets with for example sharding, the contracts still need to be interpreted by a VM, which would limit performance.
 
-
+## Pros and cons of smart contracts
 
 
 
