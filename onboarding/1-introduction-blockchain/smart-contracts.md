@@ -21,7 +21,7 @@ Smart contracts are not equal to contracts in the realm of traditional, non-digi
 
 </ExpansionPanel>
 
-Essentially, smart contracts are automated agreements between contract creators and recipients written in code. They are baked into blockchains. Therefore, smart contracts are immutable and irreversible.
+Essentially, smart contracts are automated agreements between contract creators and recipients written in code. They are baked into blockchains; smart contracts exist across a distributed, decentralized networks (i.e. blockchains). Therefore, smart contracts are immutable and irreversible. These contracts allow for the execution, enforcement, and verification of agreements among anonymous parties, without needing a central authority, legal system, or external enforcement system. 
 
 Virtual-machine blockchains like Ethereum addressed the demand for more programmability because, at the time, the options available for building decentralized applications (dApps) were limited. Before Ethereum introduced smart contracts, most developers would build on top of the complex and limited Bitcoin scripting language, or fork the Bitcoin codebase which was hard to work with and customize. With Ethereum's Virtual Machine (EVM), the state machine brought the possibility of interpreting Turing-complete programs, smart contracts. These contracts are suited for use cases like one-time events such as initial coin offerings (ICOs).
 
@@ -31,7 +31,7 @@ Smart contracts are a main application area in blockchain technology. Understand
 
 <ExpansionPanel title="The beginnings of smart contracts">
 
-Let us backtrack to the 1990's when Nick Szabo first used the term smart contract in his [*Formalizing and Securing Relationships on Public Networks*](https://journals.uic.edu/ojs/index.php/fm/article/view/548/469). In his paper, Szabo introduces the possibility of efficiently transferring automated traditional contracts from common law into distributed protocols, especially in conjunction with digital transactions. He uses the example of a vending machine to break his proposition down into a real-life scenario.
+Let us backtrack to the 1990's when Nick Szabo first used the term smart contract in his paper [Formalizing and Securing Relationships on Public Networks](https://journals.uic.edu/ojs/index.php/fm/article/view/548/469). In his paper, Szabo introduces the possibility of efficiently transferring automated traditional contracts from common law into distributed protocols, especially in conjunction with digital transactions. He uses the example of a vending machine to break his proposition down into a real-life scenario.
 
 The vending machine is a contract with bearer: those with a sufficient amount of coins can engage in an exchange and receive the goods offered without the need for an actual person to take the money and hand over the item. Smart contracts in blockchain serve that same purpose but are much more versatile.
 
@@ -41,13 +41,13 @@ Feel free to take a closer look at Nick Szabo's paper [Formalizing and Securing 
 
 </HighlightBox>
 
-Szabo envisioned a world where contracts could be embedded in all kinds of property with value and be controlled digitally. The main argument is that software could minimize human involvement therefore lowering costs and creating a more efficient relationships by automating contract performance, monitoring, and enforcement. This is where the "smart" comes in: These type of contracts are "self-enforcing".
+Szabo envisioned a world where contracts could be embedded in all kinds of property with value and be controlled digitally. The main argument is that software could minimize human involvement therefore lowering costs and creating a more efficient relationships by automating contract performance, monitoring, and enforcement. This is where the "smart" comes in: these type of contracts are "self-enforcing".
 
-Since Szabo’s article, we use the term **smart contract** to describe the transfer from a common law contract to computer code or programs. It can be understood as a legally binding contract in digital form, or as others put it, a computerised protocol that executes the terms of a common contract.
+Since Szabo’s article, we use the term **smart contract** to describe the transfer from a common law contract to computer code or programs. More specificallz, smart contracts are defined by Szabo as transaction protocols executing the terms of a contract as understood in common law. It can be understood as a legally binding contract in digital form, or as others put it, a computerised protocol that executes the terms of a common contract.
 
-Later, Szabo propsed a digital currency called BitGold. While the asset was never actually launched, this Bitcoin predecessor argumented in faovor of the use of smart contract as they could allow trustless transactions on the internet.
+Later, Szabo propsed a digital currency called Bit Gold in 1998. While the asset was never actually launched, this Bitcoin predecessor argumented in faovor of the use of smart contract as they could allow trustless transactions on the internet.
 
-Smart contracts later resurfaced with **distributed ledger technology (DLT)**. DLT revitalised the debate surrounding their advantages and usefulness, as well as potentials for application of smart contracts.
+Smart contracts later resurfaced with **distributed ledger technology (DLT)**. DLT revitalized the debate surrounding their advantages and usefulness, as well as potentials for application of smart contracts.
 
 </ExpansionPanel>
 
@@ -74,7 +74,7 @@ Before diving further, let's define smart contracts in the context of blockchain
 
 You can understand smart contracts as automated agreements. Due to their automation, the need to resolve disputes through legal means is expected to be reduced.
 
-> a **smart contract** represents _a computer protocol intended to provide a self-executing, self-enforcing, and self-verifying contract._
+> A **smart contract** represents _a computer protocol intended to provide a self-executing, self-enforcing, and self-verifying contract._
 
 Simplistically speaking, a smart contract is a coded "if/when-then" statement executed when a trigger condition is fulfilled - as soon as pre-determined terms and conditions are met. **Smart contracts** are computer protocols that are:
 
@@ -96,7 +96,7 @@ At the same time, smart contracts, like in Ethereum, are all run by the same vir
 
 ### Smart contracts are self-executing
 
-Smart contracts automate the established "contractual" terms - as specified in the code. These contracts carry out the terms they are programmed to execute.
+Smart contracts automate the established "contractual" terms - as specified in the code. These contracts carry out the terms they are programmed to execute as the code controls the implementation of the agreement.
 
 Generally speaking: after the contract is coded, it is deployed. As soon as the trigger, the terms and conditions that need to be fulfilled, occurs, the code of the smart contract is executed. This does not require the developer to set any type of flag or any type of further interaction with the smart contract. The contract itself is coded in a way that it can run and execute its operations as coded **without** any further involvement of a user or developer. For this reason, smart contracts are viewed as self-executing.
 
@@ -118,71 +118,76 @@ Smart contracts cannot be changed once deployed as immutability in blockchain ne
 
 ### Smart contracts are self-verifying
 
-Since the smart contracts exist on the blockchain, as soon as the contract terms are met, transactions are automatically carried out and data is recorded securely as it cannot be altered nor deleted.
+Since the smart contracts exist on the blockchain, as soon as the contract terms are met, transactions are automatically carried out and data is recorded securely as it cannot be altered nor deleted. Thus, there is no need for verification outside the contract - assuming the code leads to no unintended consequences.
 
+The smart contract itself can verify proper execution with the conditions specified in the code because all actions are conducted in form of a transaction, and these transactions are trackable and permanent.
 
+In the end, the immutability of blockchain networks combined with the automation of a deployed smart contract lead to smart contracts being self-verifying.
 
 ## Pros and cons of smart contracts
 
-- All BC pros:  speed, efficiency, accuracy, trust, transparency, security, savings
-- automation
-- decrease the possibility of third-party manipulation by eliminating the requirement for brokers or other intermediaries to ratify the already signed legal contracts. 
-- lack of an intermediary in smart contracts saves money
-- Dapp development
-- parties have complete visibility --> transparency
-- Immutability:  Smart contracts are encrypted, and cryptography protects all documents from being tampered with.
--  smart contracts also eliminate errors that occur due to manual filling out of several forms.
-- autonomy and savings --> risk of manipulation by 3rd partoes, no intermediaries which reduces costs
-- all stored on BC
-- safety: encrypted and cryptography leads to immutability
-- speed: faster processes as they are automated
-Time-efficiency. Elaborating, agreeing upon, and enforcing a paper-based contract usually takes weeks. The process is dragged on due to the reliance on multiple intermediaries and a huge feedback loop. Using blockchain smart contracts require no legal compliance and no need to reach out to lawyers since they don’t require the intervention of the court to be enforced. 
-Security. As smart contracts use data encryption, they are one of the safest ways to ensure no third party can modify the document. Thanks to high-level security, smart contracts have significant potential implications for international relations and political agreements. 
-Precision. A smart contract is more flexible and accounts for a higher level of detail than its paper counterpart. Such an agreement can process a list of elaborate conditions and choose the right scenario for execution out of dozens of others. Also, there’s no human error during the execution of the agreement — thus, the odds of deviations from the agreement are lower. 
-Money savings. Smart contracts don’t require the parties to hire intermediaries for negotiations. They are easier to store, don’t require printing, don’t take up physical space. 
-Transparency. When elaborating on a smart contract, both parties get to go through the littlest details. Hence, there’s no risk of missing out on important points or misunderstanding each other. Thanks to its tamper-resistance, a smart contract evokes more trust from both parties that are signing it. 
-Accuracy
+Now that you have a solid understanding of what a smart contract is, a closer look at the benefits and potential disadvantages of smart contracts is advisable.
 
-Since this type of contract is based on “if/then” relationships written into the code, when all conditions are met, contracts are executed. Therefore, they allow for infinitely more precision in their execution than what is allowed by traditional judicial frameworks, while at the same time they leave no room for subjective interpretation by human participants.
+Once a triggering condition is met, a smart contract immediately begins executing. The smart contract is completely automated as it is self-executing and completely digital. This makes smart contracts **faster, more efficient, and accurate** compared to only partly-automated or completely manual processes. The potential for errors due to manual data and document handling is eliminated with the automation of contracts. In comparison with common law contracts, smart contracts are more time-efficient. They do not have to go through the different stages of contracting, which include intermediaries and are determined by the legal framework that applies. Smart contracts are often viewed as an opportunity to bypass the legcay of centralized inefficiencies.
 
- 
+In addition, there is no need for third party involvement  as smart contracts are deployed in blockchain networks and all transactions on the network are recorded in a immutable, tamper-proof, and shared ledger. This leads to **increased trust** in the contract itself due to the **transparent and immutable** nature of (public) blockchain networks. Contract compliance and enforcement are completely independent of any third parties and ruled by the smart contract code.
 
-Speed
+The potential for automation combined with the reduced need for intermediaries results in **cost-effectiveness**. Involving intermediaries, third parties assisting in a process, does not only increase the amount of time a process requires but also the amount of costs for that process to be conducted due to additional fees, for example. The reduced role of intermediaries translates to lower fix costs and fees, as well as faster transaction times.
 
-As a paperless business tool, smart contracts are very quickly processed. Moreover, their automated and digital nature allows for incredibly fast data input and modification. When time is equalized with money, this is a significant advantage to have over the competition, for instance.
+Smart contracts are **secure** because the blockchain's ledger is encrypted and all records are interconnected cryptographically to establish immutability. A malicious participant would have to alter the entire chain to change a single detail on the ledger and then get the new version successfully approved through the validation consensus. This prevents tampering and makes it very difficult to hack a blockchain network and of course, also a smart contract running on a blockchain.
 
- 
+Higher **precision/accuracy** is often also named when talking about smart contract benefits. A smart contract is more flexibel compared to a common law contract because:
 
-Cost-effectiveness
+* Smart contracts do not have to be compliant to a legal framework - one could opt for legal compliance but one does not have to.
+* Smart contracts are only limited by their code and the network they are running in - they are built with "if-then" statements, which makes a great number of operations for execution possible.
 
-Having in mind that utilizing these contracts eliminates all need to employ intermediaries that would vouch for the unviolated nature of information, using agreements of this type is less costly for companies than traditional ones. In this sense, trust is built into the mechanism of recording and executing the terms of the agreement – blockchain.
+It can account for any level of detail in its code and thus, for different scenarios. The contract will execute as defined in the code. Unlike common law contracts, smart contracts are not subject to interpretation and exist without context. As long as the contract is coded taking into account unintended consequences and with an eye to detail when it comes to potential loopholes, the **potential of a deviating contract implementation is minimized**.
 
- 
+The characteristics that make smart contracts actractive at the same time can also be seens as causing the shortcomings of smart contracts.
 
-Trust
+The self-execution of smart contracts leads to automation but also makes it **impossible to change** the process case-by-case. Thus, before implementing a smart contract code-wise, developers should think about the following questions:
 
-Encoded into the blockchain platform, and based on the same principles, smart contract technology inherently invokes the rule of trust. Encrypted fragmented records of legal relationships and financial transactions are shared between all blockchain participants, thus ensuring their intended undamaged condition free of malicious modification.
+* What is the general process flow that will be implemented by the code?
+* What is the trigger to start execution?
+* How is the execution be enforced by the code?
+* What conditions need to be met to verify proper functioning?
+* What are potential unintended consequences? And, how could they be mitigated?
+* Are there any loopholes that could be exploited?
 
- 
+As code is also written by a human being, **human error** might not be an issue in reagrd to execution but even more so when the code is being written. Errors in smart contracts can lead to the contract wrongly executing and having unintended consequences. This type of errors can be costly and would require optimizing the code again and deploying the smart contract with updates to the chain a second time as most protocols do not have a mechanism to update a smart contract. Such errrors in the code become extremely costly when they lead to a loophole, which could be **exploited** by malicious nodes.
 
-Security
+Another disadvantage of relying completely on smart contracts relates to **regulatory clarity**. Legal certainty is an issue in many use cases when it comes to blockchain technology. Although regulatory agencies and institutions have worked on adapting to the changed technological landscape of the 21st century, there is still much that remains in grey areas. For example, smart contracts are not legally-binding contracts. So they can represent a contractual relationship but are not one per se. When it comes to transactions on blockchain networks of cryptocurrencies and tokens holding value, general regulation, especially taxation, has also been a pressing issue. This makes any type of litigation difficult. It can be assumed that regulatory clarity will be achieved in the upcomming years as the technology is still maturing and so is the legal framework.
 
-Again, the fact that all information related to this type of contract – or anything stored in blockchain really – is broken down into encrypted sections distributed across the network is precisely what makes it safe from tampering. To change a piece of information within a smart contract, the entire chain would need to be altered and that is only done through a validation consensus.
+Smart contracts are limited when it comes to their functionality. They exist in a blockchain universe. Therefore, the smart contract can only base its execution on the information and data included on-chain. For any **external data/information**, an **oracle** is needed.
+
+<HighlightBox type="info">
+
+Similar to how an oracle in ancient times provided insights and counsel based on its predicitions, an oracle in blockchain is a third-party service providing information to smart contracts and other on-chain mechanisms from outside the blockchain. Oracles can also be used to provide off-chain services with information from the chain.
+
+To be able to fulfill its role, oracles query, verify, and authenticate data sources. This is often achieved with an API endpoint.
+
+</HighlightBox>
+
+Relying on an oracle can be problematic as the quality of data and reliability is determined by the oracle. If you pick the wrong oracle, you might end up with faulty or even maliciously-intended, wrong data. This holds especially through for oracles based on a single source of truth. As with centralization in general, such a single source of truth could be attacked or altered by those managing the data source. Thus, using a decentralized oracle that queries multiple data sources, helps counter the issue of potentially unreliable data.
+
+<HighlightBox type="note">
+
+As oracles are not part of blockchain networks but external to them, the information provided is not part of the blockchain's consensus and does not benefit from the security architecture of blockchains.
+
+</HighlightBox>
+
+Lastly, a persisting challenge in blockchain environments remains **scalability**. Sometimes scaling by adding more machines to a network is done to counter scalability issues. With more machines, more nodes can be accepted and then participate in state replication and consensus. This only helps counter the issue to a certain point.
+
+<HighlightBox type="info">
+
+You will dive deeper into scalability and the scalability issue in blockchain technology, in the [Introduction to Cosmos](2-introduction-cosmos/introduction.md). The scalability issue is one of the main pressure points Cosmos envisioned to address.
+
+</HighlightBox>
+
+The amount of resources available for smart contract execution are limited to the network the contract is running on. All operations in a blockchain that are to be conducted, share the pooled network's resources. This can lead to a very tight competition after a certain network size is reached. Furthermore, transaction finality in blockchain networks can be a challenge. Some use cases require transaction finality and thus, are not suited to public blockchain networks that allow forking. Common challenges of blockchain technology are often also common issues in smart contracting.
 
 
-
-
-
-Cons
-- automated --> self-execution
-- smart contracts and blockchain networks are programmed by hand. Human error is always possible, and that error could lead to exploits
-- regulatory clarity 
-- can’t pull information outside of the network in which they exist. --> need of an oracle
-- long-standing scalability issue --> Scalability is a core challenge of blockchain technology. Cosmos allows applications to scale to millions of users. This degree of scalability is possible as Cosmos addresses two types of scalability:
-
-Horizontal scalability: scaling by adding similar machines to the network. When "scaling out", the network can accept more nodes to participate in the state replication, consensus observation, and any activity that queries the state.
 Vertical scalability: scaling by improving the network's components to increase its computational power. When "scaling up", the network can accept more transactions and any activity that modifies the state.
-- VM networks: shared resources, when is a transaction done, transaction finality,....all common bc problems
 - difficult to change --> almost imposible, need to deploy new contract --> errors can be time-consuming and expensive to counter
 - Loophole possibility
 - How much 3rd party is really eliminated
@@ -191,32 +196,9 @@ Vertical scalability: scaling by improving the network's components to increase 
 - Code bugs + lack of context
 Reliance on the Code
 
-Many people still vary from utilizing contracts built on blockchain to conduct their business precisely because they believe no code is perfect simply because it has to be created by a human. In that sense, it’s reasonable to think that there will always be flaws others can use to gain unauthorized access to the system and perform malicious actions.
 
  
 
-Regulation
-
-Since smart contracts and blockchain technology are still maturing, we are yet to see how the legal systems across the world will handle these business agreements in terms of taxation and other forms of regulation.
-
-Nevertheless, these issues are expected to be addressed and resolved as the technology matures and is perfected over time.
-
-In any case, these contracts are formulated in such a way that they truly represent the future of humankind, especially when having in mind the technology-based society we live in.
-
-
-
-From course:
-Self-exec:
-Both parties can observe the performance of terms, if the code is written to confirm this information and include it on the chain.
-
-The need for often costly and time-consuming litigation could be potentially reduced drastically, because parties can be forced to comply with the rules and specifications of their contract by including the stipulated actions in the underlying code and automating them. This leads us right to the second smart contract characteristic.
-
-Self-verif:
-
-Self- enforcing:
-Contract parties can be forced to comply with the rules and specifications of their contract by including the stipulated actions in the underlying code.
-
-This in turn reduces ex-ante transaction costs in the search and signalling process, as well as ex-post costs with regards to monitoring and enforcement.
 
 
 <HighlightBox type="reading">
@@ -229,18 +211,8 @@ This in turn reduces ex-ante transaction costs in the search and signalling proc
 * [Shadab, H. (2014): What are Smart Contracts, and What Can We do with Them?. In: Coincenter.](https://coincenter.org/entry/what-are-smart-contracts-and-what-can-we-do-with-them)
 * [Szabo, N. (1997): Formalizing and Securing Relationships on Public Networks. In: First Monday 2 (9)](https://journals.uic.edu/ojs/index.php/fm/article/view/548/469)
 
-
 </HighlightBox>
 
-
-
-
-# Legal Considerations
-
-
-
-
---> add more on limitations and difficulties and sub-section on Gas
-
-
 ## Next up
+
+You mastered the overview of smart contracts, next you can dive into an introduction to the term "crypto economy" and 
