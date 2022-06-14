@@ -14,7 +14,7 @@ order: 0
 
 This chapter is a general introduction to the concept of blockchain. It is not very technical and reiterates concepts that you might already know. Existing terminology and technologies are repeated because they feed into blockchain technology. Thus, it makes sense from a structural perspective to revisit certain important aspects and understand how they apply to the technology itself.
 
-If you feel already very versed in the tech behind blockchain protocols, you can skip ahead to the next chapter for an [Introduction to Cosmos](../2-introduction-cosmos/index.md), or you can go through this short introduction as a refresher.
+If you already feel well-versed in the tech behind blockchain protocols, you can skip ahead to the next chapter for an [Introduction to Cosmos](../2-introduction-cosmos/index.md), or you can go through this short introduction as a refresher.
 
 Have fun!
 
@@ -26,10 +26,10 @@ Have fun!
 
 In this chapter, you will:
 
-* Briefly describe general concepts of networking to introduce the concept of a ledger and consensus, which are central in blockchain technology.
-* Discuss public-key cryptography and how public/private key pairs can be used to encrypt, decrypt, sign, and verify messages.
-* Revisit the development of computing over the past decades and how blockchain fits into it.
-* Introduce taxonomy, attributes, and concepts related to blockchain technology such as deployment patterns, smart contracts, and the crypto economy.
+* Briefly review some general networking concepts to introduce the concept of ledgers and consensus, which are central in blockchain technology.
+* Explore public-key cryptography and how public/private key pairs can be used to encrypt, decrypt, sign, and verify messages.
+* Revisit the development of computing over the past decades and how blockchain fits into this.
+* Look at taxonomy, attributes, and concepts related to blockchain technology such as deployment patterns, smart contracts, and the crypto-economy.
 
 At the end of this chapter, you can find some [reflection questions](./reflection.md) and a [self-assessment quiz](./self-assessment.md).
 
