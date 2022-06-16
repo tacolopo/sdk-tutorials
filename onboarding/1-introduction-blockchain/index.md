@@ -29,7 +29,7 @@ In this chapter, you will:
 * Briefly review some general networking concepts to introduce the concept of ledgers and consensus, which are central in blockchain technology.
 * Explore public-key cryptography and how public/private key pairs can be used to encrypt, decrypt, sign, and verify messages.
 * Revisit the development of computing over the past decades and how blockchain fits into this.
-* Look at taxonomy, attributes, and concepts related to blockchain technology such as deployment patterns, smart contracts, and the crypto-economy.
+* Look at taxonomy, attributes, and concepts related to blockchain technology such as deployment patterns, smart contracts, and the crypto economy.
 
 At the end of this chapter, you can find some [reflection questions](./reflection.md) and a [self-assessment quiz](./self-assessment.md).
 
