@@ -203,6 +203,8 @@ Reliance on the Code
 
 <HighlightBox type="reading">
 
+**Further readings:**
+
 * [CapGemini Consulting (2016): Smart Contracts in Financial Services: From Hype to Reality](https://www.capgemini.com/consulting/wp-content/uploads/sites/30/2017/07/smart-contracts.pdf)
 * [Cointelegraph: What are smart contracts in blockchain and how do they work?](https://cointelegraph.com/ethereum-for-beginners/what-are-smart-contracts-a-beginners-guide-to-automated-agreements)
 * [Cosmos SDK Documentation: Application-Specific Blockchains](https://docs.cosmos.network/master/intro/why-app-specific.html)
