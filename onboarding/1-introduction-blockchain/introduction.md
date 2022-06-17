@@ -30,11 +30,11 @@ The blockchain journey begins with a problem...the **double-spending problem**.
 
 The double-spending problem refers to a potential flaw in cryptocurrencies and other digital cash schemes: _what if the same single digital token can be spent more than once, regardless of the available account balance?_
 
-Satoshi Nakamoto, whose identity remains shrouded in mystery, published a solution to this problem in his seminal whitepaper _[Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)_ in October 2008.
+Satoshi Nakamoto, whose identity remains shrouded in mystery, published a solution to this problem in his seminal whitepaper [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) in October 2008.
 
 <HighlightBox type="docs">
 
-Satoshi Nakamoto's _[Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf)_ is a reasonably straightforward paper to read, even for a non-expert. Feel free to have a look at the first whitepaper for a blockchain protocol.
+Satoshi Nakamoto's [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) is a reasonably straightforward paper to read, even for a non-expert. Feel free to have a look at the first whitepaper for a blockchain protocol.
 
 </HighlightBox>
 

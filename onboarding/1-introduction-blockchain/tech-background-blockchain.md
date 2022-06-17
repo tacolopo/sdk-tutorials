@@ -12,14 +12,13 @@ tag: fast-track
 In the next sections, you are going to begin your blockchain journey with an introduction to the tech background making blockchain protocols possible by:
 
 * [Reviewing what networks and protocols are, as well as recapping the most central terms in networking - node, client, and server.](./tech-background-blockchain.md)
-* [Exploring how blockchains are distributed ledgers.](./ledgers.md)
+* [Exploring how blockchains can be understood as distributed ledgers.](./ledgers.md)
 * [Taking a closer look at public-key cryptography.](./cryptographic-fundamentals.md)
 * [Diving into how consensus is reached in a decentralized network.](./consensus.md)
-* Revisiting the different conceptualizations of blockchains.<!--ANDREW: no link?-->
 
 </HighlightBox>
 
-This section explores the technical background making blockchains possible. Starting with networks and protocols, it then dives deeper into blockchains as a [ledger](./ledgers.md), as well as how [consensus](/consensus.md) is established in blockchains, and [cryptographic fundamentals](./cryptographic-fundamentals.md) of blockchain technology in the following sections.
+This part of the course explores the technical background making blockchains possible. Starting with networks and protocols, it then dives deeper into blockchains as a [ledger](./ledgers.md), as well as how [consensus](/consensus.md) is established in blockchains, and [cryptographic fundamentals](./cryptographic-fundamentals.md) of blockchain technology in the following sections.
 
 If you are thinking "this all sounds very familiar", do not worry: you can always go ahead to the sections for a closer look at blockchain technology itself - the [origins of blockchain technology](./blockchain-tech-details), [deployment patterns in blockchain](./deployment.md), and [smart contracts](./smart-contracts.md).
 
@@ -37,11 +36,11 @@ Start with some definitions to make this easier:
 
 * **Data:** a series of one or more symbols given meaning by acts of interpretation.
 * **Database:** an organized collection of data.
-* **Data field:** holds a single attribute of an entity. For example, a date field "15th of October 2018" can be treated as a single piece of data, _the birthdate_, or three separate fields, meaning the day, month, and year.
+* **Data field:** holds a single attribute of an entity. For example, a date field "15th of October 2018" can be treated as a single piece of data, _the birthdate_, or three separate fields, _day, month, and year_.
 * **Record:** a compilation of fields containing exactly one value. For instance, an employee record might contain fields like name, address, and birthdate.
 * **File:** a collection of related records.
 * **Network:** a group or system of interconnected computers and other hardware devices.
-* **Node:** a member of a network, connected through communication channels that enable them to exchange data and share resources.
+* **Node:** members of a network connected through communication channels that enable them to exchange data and share resources.
 * **Protocol:** a set of rules governing the exchange or transmission of data between devices.
 * **Document:** a set of structured data that has a beginning and an end.
 * **Client:** in a network, a client refers to a computer that is capable of obtaining information and applications from a server.
@@ -63,7 +62,7 @@ Imagine two computers that are connected and have access to two different databa
 4. Computer B sends the document to Computer A.
 5. Computer A receives the document and interprets the data, perhaps storing it in its database or executing a series of actions.
 
-In general, an encode-decode sequence happens on the two computers to **synchronize data between machines**. First, a sequence of characters is *encoded* in a specialized format, then sent, and finally *decoded* by reversing the process.
+In general, an encode-decode sequence happens on the two computers to **synchronize data between machines**. First, a sequence of characters is _encoded_ in a specialized format, then sent, and finally, _decoded_ by reversing the process.
 
 The role of **documents** is important to highlight here. What does a document transfer look like?
 
@@ -79,7 +78,7 @@ With APIs, developers can make calls or requests to send and receive information
 
 * An API endpoint - you can often find a URL for the endpoint to allow software to communicate with each other.
 * A header providing information for clients and servers, for example authentication credentials.
-* A method which specifies the action necessary for the request - four basic API methods often used are `GET`, `PUT`, `POST`, and `DELETE`.
+* A method which specifies the action necessary for the request - four basic methods often used are `GET`, `PUT`, `POST`, and `DELETE`.
 * Data, or information, sent by a server specifying the request.
 
 </ExpansionPanel>
@@ -154,7 +153,7 @@ Centralization and decentralization were attributes introduced long before to de
 
 </ExpansionPanel>
 
-You will see the term _decentralized_ come up a lot in blockchain literature. What exactly constitutes a distributed vs. decentralized system is a hotly debated subject. Complicating things further is the fact that systems can be a mix of both. Different network typologies have been proposed; some view resource and power control as important aspects to differentiate networks; still, differentiating distributed and decentralized networks by the location and control of resources includes a linear spectrum notion of centralization in networks.
+You will see the term _decentralized_ come up a lot in blockchain literature. What exactly constitutes a distributed vs. decentralized system is a hotly debated subject. Complicating things further is the fact that systems can be a mix of both. Different network typologies have been proposed. Some view resource and power control as important aspects to differentiate networks; still, differentiating distributed and decentralized networks by the location and control of resources includes a linear spectrum notion of centralization in networks.
 
 <HighlightBox type="tip">
 
@@ -162,15 +161,15 @@ Watch [Greg Slepak explain the concept of decentralization](https://www.youtube.
 
 </HighlightBox>
 
-For the purpose of this discussion, a useful focus is on the main difference between the different types: the number of **points of failure**.
+For the purpose of this discussion, focus on the main difference between the different types: the number of **points of failure**.
 
-A **point of failure** can be understood as _a single node or part of a network whose failure leads to the shutdown or dysfunction of the entire network, or the system no longer being able to perform its intended operations_. Centralized networks have a single point of failure, whereas the more decentralized or distributed a network is, the more simultaneous failures are required to compromise the system overall. Erasing a point of failure leads to less centralization and towards a distributed network.<!--ANDREW: please check the second sentence here to assess whether it is acceptable; I considered the original phrasing to sound too much like "having only one point of failure" is a good thing!-->
+A **point of failure** can be understood as _a single node or part of a network whose failure leads to the shutdown or dysfunction of the entire network, and/or the system no longer being able to perform its intended operations_. Centralized networks have a **single** point of failure. The more decentralized or distributed a network is, the more simultaneous failures are required to compromise the system overall. Erasing a point of failure leads to less centralization and towards a distributed network.
 
-Although the advantages and disadvantages of each type continue to be debated, to conclude: network design has implications on functionality and more general issues, for example privacy and transparency. It is important to keep in mind that a network does not have to be solely centralized, decentralized, or distributed - it can be a mix of different components of each type. The network design should always match the envisioned functionality of the network.
+Although the advantages and disadvantages of each type continue to be debated, to conclude: network design has implications on functionality and more general issues, for example, privacy and transparency. It is important to keep in mind that a network does not have to be solely centralized, decentralized, or distributed - it can be a mix of different components of each type. The network design should always match the envisioned functionality of the network.
 
 <ExpansionPanel title="Peer-to-peer (P2P) networking - a distributed network">
 
-A **peer-to-peer (P2P) network** has a **distributed architecture**, meaning that work is distributed among members of the network. P2P networks are usually composed of computer systems as peers which connect via the internet. Each participant, called a node, connects to a limited number of other nodes, which are commonly referred to as its **peers**. Peers make resources like computing power and network bandwidth available to all peers in the network.
+A **peer-to-peer (P2P) network** has a **distributed architecture**, meaning that work is distributed among members of the network. P2P networks are usually composed of computer systems as peers that connect via the internet. Each participant, called a node, connects to a limited number of other nodes, which are commonly referred to as its **peers**. Peers make resources like computing power and network bandwidth available to all peers in the network.
 
 All participants are equal in that they can all request information and answer requests. Understand "equality" here to mean that all participants are **equally privileged and equipotent**. For this reason, P2P networking has been seen as a means for an egalitarian social network.
 
@@ -193,7 +192,7 @@ Hashing, chunk verification, and a higher degree of encryption are means to miti
 
 Are P2P networks decentralized, distributed, or centralized networks?
 
-P2P networks can be decentralized, distributed, centralized, or a mix. When a system has different components which combine P2P elements with other networking concepts, it can at the same time have parts typically known as distributed but also include centralized aspects.
+P2P networks can be decentralized, distributed, centralized, or a mix. When a system has different components which combine P2P elements with other networking concepts, it can at the same time have parts typically known as distributed and also include centralized aspects.
 
 Remember the two P2P services mentioned earlier, Napster and BitTorrent? They include aspects typically ascribed to distributed and centralized networks.
 
@@ -230,7 +229,7 @@ Currency transfers and smart contract implementation is done by adding transacti
 **Further reading:**
 
 * [Baran, Paul (1964): On Distributed Communications](https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf)
-* [Slepak, Greg (2015): Deconfusing Decentralization - a very good introductory video on the concept of decentralisation](https://www.youtube.com/watch?v=7S1IqaSLrq8)
+* [Slepak, Greg (2015): Deconfusing Decentralization - a very good introductory video on the concept of decentralization](https://www.youtube.com/watch?v=7S1IqaSLrq8)
 
 </HighlightBox>
 
