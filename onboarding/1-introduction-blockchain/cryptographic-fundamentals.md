@@ -22,7 +22,7 @@ Until some decades ago, cryptography constituted a method of encryption mainly b
 
 In ancient times **simple mechanisms for encryption** were used. One example of such a simple instrument is the so-called **Caesar's cipher**, also known as **shift cipher**. Named after Julius Caesar, who used it for private correspondence, the shift cipher is a type of substitution cipher already used long before Caesar.
 
-Caesar's cipher constitutes a substitution mechanism, in which each letter in a message text is replaced by a different letter, all of which are selected by moving a fixed number of positions in the alphabet (aka the "shift value"). For example, the text "ABC" if shifted by 3 steps becomes "DEF". This cypher can easily be deciphered (or "broken") because it is a single-alphabet substitution cipher. Breaking Caesar's cipher is possible by using two rotating disks, among other methods.
+Caesar's cipher constitutes a substitution mechanism, in which each letter in a message (text) is replaced by a different letter selected by moving a fixed number of positions in the alphabet (aka the "shift value"). For example, the text "ABC" shifted by three steps becomes "DEF". This cypher can easily be deciphered (or "broken") because it is a single-alphabet substitution cipher. Breaking Caesar's cipher is possible by using two rotating disks, among other methods.
 
 ![Rotating disk](/onboarding/1-introduction-blockchain/images/caesars-cipher.png)
 
@@ -41,7 +41,7 @@ These conditions are met by so-called [one-time pad](https://en.wikipedia.org/wi
 
 </HighlightBox>
 
-Simple substitution ciphers like Caesar's cipher are easily broken. This becomes clear when observing two different conditions: 
+Simple substitution ciphers like Caesar's cipher are easily broken. This becomes clear when observing two different scenarios: 
 
 * The cipher type (a simple substitution cipher) is known to the malicious party.
 * The malicious party knows Caesar's cipher is being used and only needs to determine the shift value.
@@ -60,14 +60,7 @@ Take a closer look at frequency analysis for the English language to better unde
 
 English has 26 characters in its alphabet, whereby E and T are the most frequent and Q and Z are the least frequent. Knowing the frequency of characters in a language makes it possible to probabilistically estimate the shift value. With computer availability, it is even easier to determine the shift value since one can measure the actual frequency distribution compared to the expected distribution by for example Chi-Squared statistics.
 
-<!--ANDREW: I would recommend cutting the "Medieval" section short here - the frequency analysis bit made sense and feels like a useful extension of knowledge from Ceasar's cypher, but I find the "homophonic" section a bit obscure.-->Another cryptographically interesting development of the Middle Ages is **homophonic substitution ciphers**, which were already used in the early 1400s by the Duke of Mantua. This is another substitution cipher, but in which each letter is replaced by multiple symbols depending on letter frequency. In doing so, it combines mono-alphabetic and poly-alphabetic features.
-
-It is, therefore, more difficult to break than other techniques with substitution ciphers, and its break difficulty depends on the number of homophones. To break them, one has to:
-
-* Find out which letter is substituted with which character.
-* Find out how many characters or symbols a letter can have.
-
-<!--ANDREW: but I would keep this bit!-->Most cryptographic techniques remained important during the Middle Ages due to their relevance in political and religious conflicts to ensure the secrecy of messages.
+Most cryptographic techniques remained important during the Middle Ages due to their relevance in political and religious conflicts to ensure the secrecy of messages.
 
 **Modern times - from (electro-)mechanical machines to electronics and computing**
 
@@ -112,9 +105,9 @@ Everybody can agree that assuring the integrity and authenticity of messages is 
 
 <ExpansionPanel title="The second half of the 20th century - the development of asymmetric cryptography and other cryptographic achievements">
 
-In 1970, British cryptographer James H. Ellis advocated the possibility of a **non-secret encryption** but was not sure about its implementation. In 1973 a colleague of his, Clifford Cocks, developed the first scheme for what later became known as the **Rivest–Shamir–Adleman (RSA) encryption algorithm**. Ron Rivest, Adi Shamir, and Leonard Adleman, all three at the Massachusetts Institute of Technology, created a generalization of Cocks' scheme which demonstrated its implementation to be possible. RSA is one of the first cryptographic systems featuring a public encryption key and a second, private, decryption key. It relies on the practical difficulty of factoring large integers because it uses a module that operates with the product of two large prime numbers.
+In 1970, British cryptographer James H. Ellis advocated the possibility of a **non-secret encryption** but was not sure about its implementation. In 1973, a colleague of his, Clifford Cocks, developed the first scheme for what later became known as the **Rivest–Shamir–Adleman (RSA) encryption algorithm**. Ron Rivest, Adi Shamir, and Leonard Adleman, all three at the Massachusetts Institute of Technology, created a generalization of Cocks' scheme that demonstrated its implementation to be possible known as RSA. RSA is one of the first cryptographic systems featuring a public encryption key and a second, private, decryption key. It relies on the practical difficulty of factoring large integers because it uses a module that operates with the product of two large prime numbers.
 
-In 1974, Malcolm J. Williamson created a key exchange cryptography system while working for the British government, though his work remained classified for many years. In 1976, Whitfield Diffie and Martin Hellman, influenced by Ralph Merkle's thinking on public-key distribution, independently published a method of **asymmetric key cryptography** nowadays known as the **Diffie-Hellman key exchange**. This became the start of public-key cryptography since it was the first published practical technique for asymmetric cryptography.
+In 1974, Malcolm J. Williamson created a key exchange cryptography system while working for the British government, though his work remained classified for many years. In 1976, Whitfield Diffie and Martin Hellman, influenced by Ralph Merkle's thinking on public-key distribution, published a method of **asymmetric key cryptography** nowadays known as the **Diffie-Hellman key exchange**. This became the start of public-key cryptography since it was the first published practical technique for asymmetric cryptography.
 
 <HighlightBox type="docs">
 
@@ -122,11 +115,11 @@ Want to take a look at the Diffie-Hellman paper introducing the key exchange? Se
 
 </HighlightBox>
 
-Another important development in the early 1970s was the **Data Encryption Standard (DES)**. Developed by IBM, the algorithm was approved by the National Bureau of Standards (NBS) after consulting the NSA and amending the version to be stronger against cryptanalysis. In 1977, it became part of the official Federal Information Processing Standard (FIPS).
+Another important development in the early 1970s was the **Data Encryption Standard (DES)**. Developed by IBM, the algorithm was approved by the National Bureau of Standards (NBS) after consulting the National Security Agency (NSA) and amending the version to be stronger against cryptanalysis. In 1977, it became part of the official Federal Information Processing Standard (FIPS).
 
 Neal Koblitz and Victor Miller both introduced **elliptic curve cryptography** in the mid-1980s. Their achievements led to the development of new public-key algorithms based on the discrete logarithm problem: discrete logarithms are quickly computable in a few special cases, but there is no efficient method known to compute them in general. Elliptic curve cryptography is mathematically more complex, while at the same time allowing for smaller key sizes and faster operations.
 
-Beginning with the era of the internet, cryptography became part of the public realm again as encryption was identified as essential for its viability. A standard for encryption was a vital necessity, among others, to ensure the internet's commercial use. Until the introduction of the **Advanced Encryption Standard (AES)**, DES continued to be used for encryption. 
+Beginning with the era of the internet, cryptography became part of the public realm again as encryption was identified to be essential for the internet's viability and became available for public uses. A standard for encryption was a vital necessity, among others, to ensure the internet's commercial use. Until the introduction of the **Advanced Encryption Standard (AES)**, DES continued to be used for encryption.
 
 After a public competition hosted by the National Institute of Standards and Technology (NIST, the successor agency of NBS), AES was selected as the encryption standard. In addition, the Secure Socket Layer (SSL) was developed and introduced as a standard, which found application in web browsing, email, etc. The necessity for encryption later became more evident with wireless internet and the expanded use of devices and applications that rely on secure communication.
 
@@ -136,8 +129,8 @@ In simple words, **public-key cryptography**, also known as _asymmetric cryptogr
 
 The two keys work together to carry out the **two functions of asymmetric cryptography**:
 
-* **Authentication:** the process of confirming an identity or the source of a message. The public key serves as a verification instrument for the private key. For example, a message can be "signed" with the sender's private key, which only they have; the recipient can confirm this fact by using the sender's public key, which is available to all.
-* **Encryption:** the process of encoding a message, as it is intended for only a specifically authorized party. The information is encrypted by the sender using the _recipient's_ public key; only the recipient's private key can decrypt the information encrypted with the public key, so even if the message is intercepted no one else can read it.
+* **Authentication:** the process of confirming an identity or verifying the source of a message. The public key serves as a verification instrument for the private key. For example, a message can be "signed" with the sender's private key, which only they have. Then the recipient can confirm the signatory by using the sender's public key, which is available to all.
+* **Encryption:** the process of encoding a message that is intended for only a specifically authorized party. The information is encrypted by the sender using the _recipient's_ public key - only the recipient's private key can decrypt the information encrypted with the public key, so even if the message is intercepted no one else can read it.
 
 <HighlightBox type="tip">
 
@@ -151,27 +144,27 @@ Modern cryptographic systems leverage computer capabilities to make the power of
 
 What makes asymmetric systems more secure than symmetric systems?
 
-Compared to symmetric key algorithms, asymmetric ones do not require parties to use a secure channel to exchange the keys for encryption and decryption. Asymmetric algorithms need to be able to output key pairs, to encrypt and decrypt information. This requires a lot of computational power compared to symmetric algorithms. The need to invest large amounts of computational power into finding the keys, often referred to as _work factor_, makes asymmetrical cryptography "practically secure".
+Compared to symmetric key algorithms, asymmetric ones do not require parties to use a secure channel to exchange the keys for encryption and decryption. Asymmetric algorithms need to be able to output key pairs to encrypt and decrypt information. This requires a lot of computational power compared to symmetric algorithms. The need to invest large amounts of computational power into finding the keys, often referred to as _work factor_, makes asymmetrical cryptography practically secure.
 
 Public-key cryptography ensures confidentiality, authenticity, and non-repudiation. Examples of applications are [S/MIME](https://en.wikipedia.org/wiki/S/MIME) and [GPG or GnuPG](https://en.wikipedia.org/wiki/GNU_Privacy_Guard), as well as the basis of several internet standards like [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security). Asymmetric key cryptography is normally applied to small data blocks due to its computational complexity.
 
 <HighlightBox type="info">
 
-**Fun fact**: cryptographic systems are not exclusive to one another. In hybrid systems, symmetrical and asymmetrical cryptography is combined. For example, asymmetric encryption could be employed to transfer symmetric encryption, which would then be used as an encryption key for the message. Examples of these hybrid cryptosystems are [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) and [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
+**Fun fact:** cryptographic systems are not exclusive to one another. In hybrid systems, symmetrical and asymmetrical cryptography is combined. For example, asymmetric encryption could be employed to transfer symmetric encryption, which would then be used as an encryption key for the message. Examples of these hybrid cryptosystems are [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) and [SSL/TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security).
 
 </HighlightBox>
 
 Does the length of the key matter?
 
-The length of the key does matter. One would think the longer the key the more security by default, but in fact very long asymmetrical cryptographic keys provide only a roughly comparable degree of security to what a shorter symmetric key would provide, because of the lower number of potential asymmetric keys for a given number of bits and the patterns within asymmetric keys. Nevertheless, a general rule to still keep in mind: _The longer the key, the more difficult it is to break the code_. An attacker has to try out every possible key to break an asymmetric algorithm with a brute force attack. The longer the key is, the more difficult it is to "guess" the right key.
+The length of the key does matter. One would think the longer the key the more secure, but in fact very long asymmetrical cryptographic keys provide at least the same degree of security to what a shorter symmetric key would provide, because of the lower number of potential asymmetric keys for a given number of bits and the patterns within asymmetric keys. Nevertheless, a general rule to still keep in mind: _the longer the key, the more difficult it is to break the code_. An attacker has to try out every possible key to break an asymmetric algorithm with a brute force attack. The longer the key is, the more difficult it is to "guess" the right key.
 
-<HighlightBox type=tip>
+<HighlightBox type="tip">
 
-To give a simple example: every binary entity of information can have the value `0` or `1`. If you have an 8-bit key, like `01110100`, there are 2^8 key variations which could fit that space, or 256 possible guesses. However, as the number of bits per unit of information increases, so does the number of possible keys. A 9-bit key would take 512 guesses, a 10-bit key takes 1024... and so on.
+To give a simple example to make it clearer: every binary entity of information can have the value `0` or `1`. If you have an 8-bit key, like `01110100`, there are 2^8 or 256 key variations which could fit that space. However, as the number of bits per unit of information increases, so does the number of possible keys. A 9-bit key has 2^9 or 512 key variations, a 10-bit key has 2^10 or 1024...and so on.
 
 </HighlightBox>
 
-Modern asymmetric ciphers have been established as a secure option but are not free of faults and possible problems. Faulty design or implementation have been points of insecurity. Furthermore, public-key cryptography is susceptible to brute force attacks, as well as "man-in-the-middle" attacks. The latter occurs when a third party intercepts, decrypts, and then re-encrypts a message to send it on to the originally intended recipient, establishing themself as an invisible intermediary. A trusted entity installed as a certification authority can prevent such attacks.
+Modern asymmetric ciphers have been established as a secure option but are not free of faults and possible problems. Faulty design and/or implementation have been points of insecurity. Furthermore, public-key cryptography is susceptible to brute force attacks, as well as "man-in-the-middle" attacks. The latter occurs when a third party intercepts, decrypts, and then re-encrypts a message to forward it on to the originally intended recipient. A trusted entity installed as a certification authority can prevent such attacks.
 
 The following examples will help you to better understand how public-private key pairs are used, and how they implement functionalities to make authentication and encryption possible.
 
@@ -216,7 +209,7 @@ It is possible to mix both conceptual ideas. For example:
 
 <ExpansionPanel title="Key management and public key infrastructure">
 
-If you look again at the Alice and Bob examples, you will notice that there is a vulnerability in "Bob gives Alice his public key". A malicious third party, Charlie, could intercept Bob's public key and pass on his public key to Alice. In this scenario, Alice unwittingly encrypts her message using Charlie's public key, thinking it is Bob's; when the encrypted message is sent, Charlie can decrypt it but Bob cannot.
+If you look again at the Alice and Bob examples, you will notice that there is a vulnerability in "Bob gives Alice his public key". A malicious third party, Charlie, could intercept Bob's public key and pass on his public key to Alice. In this scenario, Alice unwittingly encrypts her message using Charlie's public key, thinking it is Bob's. When the encrypted message is sent, Charlie can decrypt it but Bob cannot.
 
 ![Intercepting a message](/onboarding/1-introduction-blockchain/images/attack.png)
 
@@ -228,25 +221,24 @@ Public key infrastructure (PKI) is used to prevent fraudulent keys and the tampe
 
 After exploring how cryptography is used to make transactions secure with the use of key pairs, now it is time to look at how the **integrity of blocks** and the logging of transactions in blocks are achieved.
 
-A **hash function** is _a function used to map a group of characters_ (i.e. data) _into values of a certain length called hash values_ - hash comes from the French "hacher" meaning to chop. Cryptographic hash functions are a special form of one-way hash functions that exhibit certain features to allow their implementation in cryptographic systems.
+A **hash function** is _a function used to map a group of characters (i.e. data) into values of a certain length called hash values or just hash_ - hash comes from the French "hacher" meaning to chop. Cryptographic hash functions are a special form of one-way hash functions that exhibit certain features to allow their implementation in cryptographic systems.
 
-A hash function performs an operation on an input of data (i.e. the string) that results in output data of fixed size called a hash value - also known as a hash code, a digest, or sometimes just a hash. The result is a fixed-length output: the output content will vary at the character level, but number of characters - its length - always remains the same, no matter the size of the message input.
+A hash function performs an operation on an input of data (i.e. the string) that results in output data of fixed size called a hash value - also known as a hash code, a digest, or sometimes just a hash. The result is a fixed-length output: the output content can vary at the character level, but the number of characters (its length) always remains the same, no matter the size of the message input.
 
 Remember, five main properties are of essence for a hash function:
 
 * It is **deterministic**: the hash function produces the same output (hash value) for the same input (message).
 * It is **fast**: the hash value for any given message is computed quickly.
-* It is **resistant**: it is infeasible to work backward and generate the input (message) from the output (hash value) _without trying **all** the possible inputs_, which could be infinite.
+* It is **resistant**: it is infeasible to work backward and generate the input (message) from the output (hash value) without trying **all** the possible inputs, which could be infinite.
 * It exhibits an **avalanche effect**: any small change to the input, changing a "b" to "B" for example, results in a completely different hash value that has no resemblance to the old hash value.
 * It is completely **unique**: it is infeasible to find two different inputs (messages) with the same hash value.
 
 <HighlightBox type="warn">
 
-Be careful with confusing *hashing* and *encrypting* - these are two different concepts, and the terms should not be used analogously.
+Be careful with confusing *hashing* and *encrypting* - these are two different concepts, and the terms should not be used analogously:
 
-**Hashing** is an operation which transforms data into a checksum or message digest. It is a _one-way_ operation; it cannot be reversed. 
-
-**Encryption** describes a _two-way_ operation that transforms a message into ciphertext _and can also transform it back into its original state_, while ensuring the confidentiality of the message. 
+* **Hashing** is an operation that transforms data into a checksum or message digest. It is a **one-way** operation; it cannot be reversed. 
+* **Encryption** describes a **two-way** operation that transforms a message into ciphertext and can also transform it back into its original state, while ensuring the confidentiality of the message. 
 
 </HighlightBox>
 
@@ -254,7 +246,7 @@ With the described characteristics, what can you do with a hash function?
 
 A cryptographic hash function:<!--ANDREW: this seems like a very close repetition of the bullet points above the highlight box... redundant?-->
 
-* Converts an input (a.k.a. the message) into an output (a.k.a. the hash).
+* Converts an input (a.k.a. the message) into an output (a.k.a. the hash or hash value).
 * Converts the data in a reasonable amount of time.
 * Operates one-way - it is practically impossible to re-generate the message out of the hash.
 * Creates unique outputs - even the tiniest change in the message changes the hash beyond recognition, so that it appears uncorrelated with the old hash value.
@@ -274,9 +266,9 @@ You can see hashing in action to get the feel for it on the [OnlineMD5 website](
 
 </HighlightBox>
 
-Cryptographic hash functions are used for digital signature and file integrity verification, and find application in areas such as credit card transactions and software updates. Their reliability is absolutely vital as they are so central to digital security and verification. Reassessing them is of importance for early detection of whether a cryptographic hash function can be re-generated.
+Cryptographic hash functions are used for digital signature and file integrity verification, and find application in areas such as credit card transactions and software updates. Their reliability is absolutely vital as they are central to digital security and verification. Reassessing them is of importance to early detect if a cryptographic hash function can be re-generated.
 
-Testing a hash function's robustness when creating unique hashes is done with **collision attacks**. In a collision attack, one tries to find two sets of inputs that produce the same hash function. In 2017, Google conducted a collision attack on [SHA-1](https://shattered.io/), which was considered a relatively insecure hash function. It was still widely used and no one had actually proved it made duplicate hashes, but Google managed to create a successful collision attack which cost roughly $110,000.<!--ANDREW: I suspect this is considered a relatively low cost - if so, probably worth emphasizing the fact.-->
+Testing a hash function's robustness when creating unique hashes is done with **collision attacks**. In a collision attack, one tries to find two sets of inputs that produce the same hash function. In 2017, Google conducted a collision attack on [SHA-1](https://shattered.io/), which was considered a relatively insecure hash function. It was still widely used and no one had actually proved it made duplicate hashes, but Google managed to create a successful collision attack which cost roughly $110,000.
 
 <HighlightBox type="info">
 
@@ -286,9 +278,9 @@ Bitcoin uses `SHA-256` and Ethereum uses `Keccak-256`and `Keccak-512` as hash fu
 
 <ExpansionPanel title="Digital signatures and certificate authority">
 
-The concept of **digital signatures** is simple: if a given message is first hashed and then encrypted by a private key, you can verify the signature by decrypting it with the corresponding public key. <!--ANDREW: next sentence isn't clear to me-->Hashing the message avoids the creation of signatures by mixing the messages and corresponding signatures.<!--ANDREW: "avoids signatures...corresponding signatures"?--> This way, you know that the sender has the private key to the given public key. However, this is not truly an identification.
+The concept of **digital signatures** is simple: if a given message is first hashed and then encrypted by a private key, you can verify the signature by decrypting it with the corresponding public key. Hashing the message avoids the creation of signatures by mixing the messages and corresponding signatures. This way, you know that the sender has the private key to the given public key. However, this is not truly an identification.
 
-It is time for a **certification authority (CA)**. The CA signs a certificate to prove the identity of the owner of a public key. Such certificates usually include the subject name, which must be verified by the CA. The identity is proven if you can verify the CA's signature and trust the CA.
+It is time for a **certificate authority (CA)**. The CA signs a certificate to prove the identity of the owner of a public key. Such certificates usually include the subject name, which must be verified by the CA. The identity is proven if you can verify the CA's signature and trust the CA.
 
 **Digital certificates** are used among other things to prove identity. They are given by a recognized Certification Authority. A widespread procedure is a public-key certificate proving ownership of a public key.
 
@@ -296,26 +288,27 @@ It is time for a **certification authority (CA)**. The CA signs a certificate to
 
 ### Merkle trees
 
-**Merkle trees**, or "hash trees", are named after Ralph Merkle who patented the concept in 1979. They are useful because they allow the **efficient and secure verification of large amounts of data**. In a Merkle tree, each **leaf** node is a block labeled with a hash of its data, and each non-leaf "parent" node is labeled with a cryptographic hash of all its child leaf nodes - in effect, the parent's hash contains the hashes of all its leaves.
+
+A **Merkle tree** is _a tree with leaf nodes labeled with a hash of its data block and non-leaf nodes labeled with a cryptographic hash of all its child nodes_ - in effect, the parent's hash contains the hashes of all its leaves. **Merkle trees**, or "hash trees", are named after Ralph Merkle who patented the concept in 1979. They are useful because they allow the **efficient and secure verification of large amounts of data**.
 
 <!--Title: What is a Merkle Tree?, URL:https://youtu.be/DeektoaH7vE--> 
 
 A Merkle tree has the following characteristics:
 
-* Each end node, or **leaf**, contains a hash of its data block.
-* The hashes of leaf nodes are then hashed by their **parent nodes** further up the tree, which always keep the computed hash of their child nodes.
-* At the top of the tree is the **Merkle root** (aka master hash, root hash, or top hash) which is the final, single hash of the series of hashes below it (i.e. every leaf in the tree).
+* Each **leaf node** contains a hash of its data block.
+* The hashes of leaf nodes are then hashed by their **non-leaf nodes**, or parent nodes, further up the tree, which always keep the computed hash of their child nodes.
+* At the top of the tree is the **Merkle root** (master hash, root hash, or top hash), which is the final, single hash of the series of hashes below it - every leaf in the tree.
 * Comparing this single parent or Merkle root with another Merkle root will tell you if all the data in the entire tree is the same.
 * Any change to any of the data will create a new hash, which will filter up the tree to the root.
 
 ![Merkle tree](/onboarding/1-introduction-blockchain/images/Merkle_Tree.png)
 
-With this type of tree, you can verify the integrity of huge amounts of data very quickly. Possible actions include:
+With this type of tree, you can verify the integrity of huge amounts of data very quickly:
 
-* Downloading and verifying the integrity of data pieces as they come in random order. Each branch of a Merkle tree can be downloaded individually and verified immediately, even if the whole tree is not yet available.
-* Quickly identifying any piece of data that has been corrupted, by following the trail of "incorrect" hashes. This failed block can then be re-downloaded quickly, verified immediately, and order restored.
+* Download and verify the integrity of data pieces as they come in random order. Each branch of a Merkle tree can be downloaded individually and verified immediately, even when the whole tree is not yet available.
+* Quickly identify the piece of data that has been corrupted by following the trail of "incorrect" hashes. This failed block can then be re-downloaded quickly and verified immediately so that the order is restored.
 
-The ability to verify the integrity of huge amounts of data is what makes a Merkle tree attractive for blockchain networks: **in a blockchain, each block header keeps one or more hashes of the root of one or more Merkle trees.**<!--ANDREW: I think this module needs some work. It's REALLY long, some of the historical detail can probably be sacrificed or condensed. And there are a few places (Merkle trees for one) where I feel like non-technical readers are going to struggle.-->
+The ability to verify the integrity of huge amounts of data is what makes a Merkle tree attractive for blockchain networks: **in a blockchain, each block header keeps one or more hashes of the root (top leaf) of one or more Merkle trees.**
 
 ## Next up
 

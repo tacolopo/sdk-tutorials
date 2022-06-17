@@ -43,7 +43,7 @@ Feel free to take a closer look at Nick Szabo's paper [Formalizing and Securing 
 
 Szabo envisioned a world where contracts could be embedded in all kinds of property with value and be controlled digitally. The main argument is that software could minimize human involvement therefore lowering costs and creating a more efficient relationships by automating contract performance, monitoring, and enforcement. This is where the "smart" comes in: these type of contracts are "self-enforcing".
 
-Since Szabo’s article, we use the term **smart contract** to describe the transfer from a common law contract to computer code or programs. More specificallz, smart contracts are defined by Szabo as transaction protocols executing the terms of a contract as understood in common law. It can be understood as a legally binding contract in digital form, or as others put it, a computerised protocol that executes the terms of a common contract.
+Since Szabo’s article, we use the term **smart contract** to describe the transfer from a common law contract to computer code or programs. More specifically, smart contracts are defined by Szabo as transaction protocols executing the terms of a contract as understood in common law. It can be understood as a legally binding contract in digital form, or as others put it, a computerised protocol that executes the terms of a common contract.
 
 Later, Szabo propsed a digital currency called Bit Gold in 1998. While the asset was never actually launched, this Bitcoin predecessor argumented in faovor of the use of smart contract as they could allow trustless transactions on the internet.
 
