@@ -1,10 +1,10 @@
 ---
 title: "Self-Assessment Quiz"
-order: 7
+order: 8
 description: XXX
 tag: fast-track
 ---
 
 # Self-Assessment Quiz - TITLE OF CHAPTER XXX
 
-##
+## Content Pending
