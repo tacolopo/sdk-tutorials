@@ -1,16 +1,16 @@
 ---
 parent:
-  title: Introduction to Blockchain
+  title: XXX
   description: XXX
   number: 1
 description: XXX
-title: Chapter Overview - Introduction to Blockchain
+title: Chapter Overview - TITLE XXX
 tag: fast-track
 order: 0
 ---
 
 <div class="tm-overline tm-rf-1 tm-lh-title tm-medium tm-muted">ADD TEXT FROM DESCRIPTION</div>
-<h1 class="mt-4 mb-6">Introduction to Blockchain</h1>
+<h1 class="mt-4 mb-6">TITLE</h1>
 
 ADD TEXT ABOUT CHAPTER
 
