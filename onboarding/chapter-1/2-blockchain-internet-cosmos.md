@@ -1,7 +1,7 @@
 ---
 title: "Blockchain, the Internet, and Cosmos"
 order: 3
-description: XXX
+description: How blockchain fits into the bigger picture
 tag: fast-track
 ---
 
@@ -33,7 +33,7 @@ It is remarkable that the person whose ideas gave rise to the internet itself wo
 This is why blockchain, *though Cosmos*, is the future. In essence:
 
 * **Blockchain** allows us to create *networks* that do not require, as Berners-Lee said, "any central control or coordination".
-* **Cosmos** is a system that links blockchains together *in the exact same way*.
+* **Cosmos** is an ecosystem that links blockchains together *in the exact same way*.
 
 Before looking at Cosmos in more detail, it is useful to consider how the internet has changed over time, and how it has differed from the concept Berners-Lee had in mind.
 
@@ -148,7 +148,8 @@ This is the vital feature which Cosmos introduces to the blockchain context. By 
 
 <HighlightBox type="link">
 
-This video provides a brief overview of the features, resources, and objectives of Cosmos: [Cosmos: The Vision](https://youtu.be/Eb8xkDi_PUg)
+* This video provides a brief overview of the features, resources, and objectives of Cosmos: [Cosmos: The Vision](https://youtu.be/Eb8xkDi_PUg)
+* For an accessible overview of Proof of Stake, see this video: [Proof of Stake (vs Proof of Work)](https://www.youtube.com/watch?v=M3EFi_POhps).
 
 </HighlightBox>
 

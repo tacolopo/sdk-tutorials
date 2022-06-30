@@ -1,7 +1,7 @@
 ---
 title: "Blockchain Use Cases"
 order: 6
-description: XXX
+description: Types of network, types of application
 tag: fast-track
 ---
 
@@ -31,8 +31,6 @@ Public networks are what blockchain technology was originally invented to servic
 * **Decentralization**: the previous features mean many public networks are completely decentralized; however, this may not work well with traditional business models.
 * **Crypto-economic incentives**: without an absolute defense against malicious action, benevolence is reinforced via rewards which, in combination with often significant network scale, disincentivize behavior that might endanger network function.
 
-
-
 ### Managed Networks
 
 Private or "managed" networks also rely on blockchain data structures. However, unlike public networks, for a managed network *Byzantine Fault Tolerance* (BFT) is not a critical factor to be solved. A public network encourages an emergent, anonymous hierarchy to temporarily arise within an unpredictable ecosystem; managed networks are predictable environments which maintain some traditional elements of authority and accountability, because these are very typical features of everyday companies and organizations.
@@ -58,7 +56,7 @@ The most obvious examples of blockchain in action are *cryptocurrencies* and *no
 
 Alternative cryptocurrencies were originally based on copies or modifications of the Bitcoin code, a difficult undertaking, but **Cosmos** allows developers to create new blockchains for many purposes, including as cryptocurrencies, with far greater ease.
 
-<ExpansionPanel>
+</ExpansionPanel>
 
 <ExpansionPanel title="Non-Fungible Tokens (NFTs)">
 
@@ -66,7 +64,7 @@ A **non-fungible token** is a tradeable digital asset (such as an image file), w
 
 However, there is debate over the extent to which the sale of an NFT represents a legal transfer of rights or ownership over the associated digit asset. In practice, the trading of an NFT technically only represents a change in ownership of the NFT itself, not necessarily that of the asset, which typically is stored conventionally and referenced on the blockchain only by a URL. It is difficult to prevent anyone from accessing the target of the URL and creating a different NFT for the exact same asset, or even of duplicating the original file entirely.
 
-<ExpansionPanel>
+</ExpansionPanel>
 
 <HighlightBox type="tip">
 

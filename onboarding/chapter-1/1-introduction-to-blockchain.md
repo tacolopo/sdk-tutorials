@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Blockchain"
 order: 2
-description: XXX
+description: An overview of blockchain technology
 tag: fast-track
 ---
 

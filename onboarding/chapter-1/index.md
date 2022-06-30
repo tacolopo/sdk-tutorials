@@ -1,15 +1,15 @@
 ---
 parent:
-  title: Introduction to Blockchain and Cosmos
-  description: XXX
+  title: Chapter 1 - Introduction to Blockchain and Cosmos
+  description: Blockchain basics for non-technical hires
   number: 1
-description: XXX
-title: Chapter Overview - TITLE Introduction to Blockchain and Cosmos
+description: Blockchain basics for non-technical hires
+title: Chapter Overview - Introduction to Blockchain and Cosmos
 tag: fast-track
 order: 0
 ---
 
-<div class="tm-overline tm-rf-1 tm-lh-title tm-medium tm-muted">ADD TEXT FROM DESCRIPTION</div>
+<div class="tm-overline tm-rf-1 tm-lh-title tm-medium tm-muted">Blockchain basics for non-technical hires</div>
 <h1 class="mt-4 mb-6">Introduction to Blockchain and Cosmos</h1>
 
 Maybe you're already familiar with blockchain through personal or professional experience, or maybe you are coming into this exciting field knowing little more about the technology than what you've seen in news headlines, memes, and social media gossip. In either case, the world of blockchain is fast-moving, and its always good to keep up-to-date and have some knowledge of your field, regardless of your specific role in the organization.
