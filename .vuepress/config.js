@@ -112,12 +112,27 @@ module.exports = {
           children: [
             {
               title: "Chapter 1",
-              path: "/onboarding/1-introduction-blockchain/",
+              path: "/onboarding/chapter-1/",
               directory: true,
             },
             {
               title: "Chapter 2",
-              path: "/onboarding/2-introduction-cosmos/",
+              path: "/onboarding/chapter-2/",
+              directory: true,
+            },
+            {
+              title: "Chapter 3",
+              path: "/onboarding/chapter-3/",
+              directory: true,
+            },
+            {
+              title: "Chapter 4",
+              path: "/onboarding/chapter-4/",
+              directory: true,
+            },
+            {
+              title: "Chapter 5",
+              path: "/onboarding/chapter-5/",
               directory: true,
             }
           ]
