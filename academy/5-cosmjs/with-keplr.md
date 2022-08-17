@@ -249,8 +249,8 @@ Keplr is now detected. By default, Keplr lets its users only connect to the bloc
 getTestnetChainInfo = (): ChainInfo => ({
     chainId: "theta-testnet-001",
     chainName: "theta-testnet-001",
-    rpc: "rpc.sentry-01.theta-testnet.polypore.xyz:26657",
-    rest: "rest.sentry-01.theta-testnet.polypore.xyz:26657",
+    rpc: "https://rpc.sentry-01.theta-testnet.polypore.xyz/",
+    rest: "https://rest.sentry-01.theta-testnet.polypore.xyz/",
     bip44: {
         coinType: 118,
     },
