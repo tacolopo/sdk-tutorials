@@ -66,6 +66,8 @@ The goal of the exercise is to find token balances, yours and the faucet's, and 
 ```typescript
 import { ChangeEvent, Component, MouseEvent } from "react"
 import styles from '../styles/Home.module.css'
+import { StargateClient } from "@cosmjs/stargate"
+
 
 interface FaucetSenderState {
     denom: string
