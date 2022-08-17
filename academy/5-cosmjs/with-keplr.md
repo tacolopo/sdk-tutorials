@@ -357,7 +357,7 @@ onSendClicked = async(e: MouseEvent<HTMLButtonElement>) => {
     const { denom, toSend } = this.state
     const { faucetAddress, rpcUrl } = this.props
     // Suggest the testnet chain to Keplr
-    await keplr.experimentalSuggestChain(getTestnetChainInfo())
+    await keplr.experimentalSuggestChain(this.getTestnetChainInfo())
     // Create the signing client
     const offlineSigner: OfflineSigner =
         window.getOfflineSigner!("theta-testnet-001")
